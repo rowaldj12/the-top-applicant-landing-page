@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Applicant Tracking System Is Your Company Using? | Free ATS Quiz</title>
+    <meta name="description" content="Find out which Applicant Tracking System killed your application — Workday, Taleo, Greenhouse, or ADP — and how to fight back. Free quiz from The Top Applicant.">
+    <link rel="canonical" href="/quiz" />
+    <meta property="og:title" content="Which Applicant Tracking System Assassinated Your Resume?" />
+    <meta property="og:description" content="Discover which Applicant Tracking System is screening you out. Free ATS quiz reveals your job application weak spots — beat the bots. Workday, Taleo, Greenhouse, ADP and more." />
+    <meta property="og:image" content="/images/quiz-og.png" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <meta property="og:image" content="/images/quiz-og.png" />
+    <meta property="og:url" content="/quiz" />
+    <meta property="og:type" content="website" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know which ATS rejected my resume?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most companies use enterprise job portals that hint at their ATS — Workday, Taleo, Greenhouse, and ADP have recognizable login screens and URL patterns. You can also take The Top Applicant's free ATS quiz, which identifies the system most likely responsible for your rejection based on how your applications have been handled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an Applicant Tracking System?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An Applicant Tracking System (ATS) is software companies use to automate the first screen of job applications. It parses your resume, scores it against the job description, and ranks or rejects you before a human ever reads your name. Over 75% of resumes are rejected by ATS before reaching a recruiter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which companies use Workday ATS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Workday is used by thousands of large enterprises in finance, healthcare, technology, and manufacturing. If you applied through a portal with a Workday-branded login screen, your resume was scored by Workday's AI against a profile built from the company's previous hires. The Top Applicant provides specific strategies for beating Workday's ranking algorithm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why was my job application rejected automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Automatic rejections happen because an ATS couldn't parse your resume correctly, didn't find sufficient keyword matches with the job description, or ranked you below other candidates on its scoring model. The system that rejected you matters — Taleo, Workday, ADP, and Greenhouse each reject resumes for different reasons. The Top Applicant identifies which ATS screened you out and provides targeted fixes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I beat an ATS and get my resume seen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beating an ATS requires knowing which system you're up against. In general: use a clean single-column format, match keywords exactly from the job description, avoid tables and graphics, and save as .docx unless otherwise specified. The Top Applicant offers ATS-optimized resume building tools specifically engineered to pass Workday, Taleo, ADP, Greenhouse, and iCIMS screening."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ink: #0a0a0a;
+            --paper: #faf9f7;
+            --accent: #1a3a2a;
+            --accent-mid: #2d5a3f;
+            --accent-light: #3d7a55;
+            --gold: #c8a84e;
+            --gold-soft: #f5ecd4;
+            --gold-dim: #a8882e;
+            --dark-bg: #0c0c0e;
+            --dark-card: #161618;
+            --dark-card-hover: #1e1e22;
+            --dark-border: #2a2a2e;
+            --dark-text: #e8e6e1;
+            --dark-text-muted: #8a8884;
+            --red: #e8412a;
+            --red-soft: rgba(232, 65, 42, 0.12);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--dark-bg);
+            color: var(--dark-text);
+            line-height: 1.65;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* =========================================
+           NAV
+        ========================================= */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 4rem;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 200;
+            background: rgba(12,12,14,0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+            color: var(--gold);
+        }
+        .logo span { color: var(--paper); opacity: 0.6; }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.6rem 1.4rem;
+            border-radius: 100px;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--accent-mid); }
+
+        /* =========================================
+           HERO
+        ========================================= */
+        .hero {
+            padding: 8rem 2rem 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero .section-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: var(--paper);
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--dark-text-muted);
+            max-width: 540px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .val {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.75rem;
+            color: var(--gold);
+        }
+
+        .hero-stat .lbl {
+            font-size: 0.8rem;
+            color: var(--dark-text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* =========================================
+           QUIZ CONTAINER
+        ========================================= */
+        .quiz-container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+        }
+
+        /* Progress bar */
+        .progress-wrap {
+            margin-bottom: 2.5rem;
+        }
+
+        .progress-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--dark-text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--dark-border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gold);
+            border-radius: 2px;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 0%;
+        }
+
+        /* Question card */
+        .question-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            animation: cardIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .question-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+        }
+
+        .question-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+            color: var(--paper);
+            line-height: 1.35;
+            margin-bottom: 2rem;
+        }
+
+        /* Answer options */
+        .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .answer-btn {
+            background: var(--dark-bg);
+            border: 1.5px solid var(--dark-border);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            text-align: left;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: var(--dark-text);
+            transition: border-color 0.2s, background 0.2s, transform 0.15s;
+            line-height: 1.55;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+        }
+
+        .answer-btn:hover {
+            border-color: var(--gold-dim);
+            background: var(--dark-card-hover);
+            transform: translateX(4px);
+        }
+
+        .answer-btn:active { transform: translateX(4px) scale(0.99); }
+
+        .answer-btn .letter {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: var(--gold);
+            background: var(--red-soft);
+            border: 1px solid rgba(232,65,42,0.2);
+            border-radius: 6px;
+            padding: 0.15rem 0.45rem;
+            min-width: 1.6rem;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        /* =========================================
+           RESULTS
+        ========================================= */
+        .result-card {
+            background: var(--dark-card);
+            border: 1.5px solid var(--dark-border);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            animation: resultReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes resultReveal {
+            from { opacity: 0; transform: scale(0.95) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .result-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .result-verdict {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            line-height: 1.15;
+            color: var(--paper);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-verdict .highlight {
+            color: var(--red);
+        }
+
+        .result-ats-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--red-soft);
+            border: 1px solid rgba(232,65,42,0.25);
+            border-radius: 100px;
+            padding: 0.4rem 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--red);
+            margin: 1rem auto 1.5rem;
+        }
+
+        .result-summary {
+            font-size: 1rem;
+            color: var(--dark-text-muted);
+            line-height: 1.7;
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .result-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .btn-autopsy {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--accent);
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            transition: background 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-autopsy:hover { background: var(--accent-mid); }
+
+        .btn-autopsy-arrow {
+            transition: transform 0.2s;
+        }
+        .btn-autopsy:hover .btn-autopsy-arrow { transform: translateX(4px); }
+
+        .result-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--dark-text-muted);
+            font-size: 0.8rem;
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0.5rem 0;
+        }
+        .result-divider::before, .result-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--dark-border);
+        }
+
+        .stripe-options {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .stripe-btn {
+            flex: 1;
+            padding: 0.75rem 0.5rem;
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: opacity 0.2s, transform 0.15s;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .stripe-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+
+        .stripe-btn-monthly {
+            background: var(--dark-bg);
+            border: 1.5px solid var(--dark-border);
+            color: var(--dark-text);
+        }
+
+        .stripe-btn-lifetime {
+            background: var(--gold);
+            color: #0a0a0a;
+        }
+
+        .stripe-btn .price {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .stripe-btn .desc {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        /* =========================================
+           SHARE / RETRY
+        ========================================= */
+        .result-share {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--dark-border);
+        }
+
+        .share-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--dark-text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .share-text {
+            font-size: 0.875rem;
+            color: var(--dark-text-muted);
+            line-height: 1.6;
+            max-width: 460px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .btn-retry {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: none;
+            border: 1.5px solid var(--dark-border);
+            color: var(--dark-text-muted);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.5rem 1.1rem;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            margin-top: 1rem;
+        }
+        .btn-retry:hover { border-color: var(--gold-dim); color: var(--gold); }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid var(--dark-border);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: var(--dark-text-muted);
+        }
+
+        footer a { color: var(--gold-dim); }
+        footer a:hover { color: var(--gold); }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+        @media (max-width: 640px) {
+            nav { padding: 1rem 1.5rem; }
+            .hero { padding: 7rem 1.5rem 2rem; }
+            .hero h1 { font-size: 2rem; }
+            .quiz-container { padding: 0 1rem 4rem; }
+            .question-card { padding: 1.75rem 1.25rem; }
+            .result-card { padding: 2rem 1.25rem; }
+            .stripe-options { flex-direction: column; }
+            .hero-stats { gap: 1.5rem; }
+        }
+
+        /* =========================================
+           ATS INTEL SECTION (SEO)
+        ========================================= */
+        .ats-intel-section {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+            border-top: 1px solid var(--dark-border);
+        }
+
+        .ats-intel-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: clamp(1.35rem, 3vw, 1.9rem);
+            color: var(--paper);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .ats-intel-intro {
+            font-size: 0.975rem;
+            color: var(--dark-text-muted);
+            line-height: 1.75;
+            margin-bottom: 2rem;
+        }
+
+        .ats-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .ats-item {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .ats-item:hover { border-color: var(--gold-dim); }
+
+        .ats-item-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+        }
+
+        .ats-item-desc {
+            font-size: 0.9rem;
+            color: var(--dark-text-muted);
+            line-height: 1.65;
+        }
+
+        .ats-item-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-top: 0.65rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.77rem;
+            font-weight: 600;
+            color: var(--gold-dim);
+            transition: color 0.2s;
+        }
+
+        .ats-item-link:hover { color: var(--gold); }
+
+        @media (max-width: 640px) {
+            .ats-intel-section { padding: 2rem 1rem 3rem; }
+        }
+
+        /* Fade out animation */
+        .fade-out { animation: fadeOut 0.25s ease forwards; }
+        @keyframes fadeOut { to { opacity: 0; transform: translateY(-8px); } }
+
+        /* Loading shimmer for transition */
+        .shimmer {
+            background: linear-gradient(90deg, var(--dark-card) 25%, var(--dark-card-hover) 50%, var(--dark-card) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 0.8s ease-in-out;
+            border-radius: 20px;
+            height: 280px;
+        }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    </style>
+</head>
+<body>
+    <!-- NAV -->
+    <nav>
+        <a href="/" class="logo">The Top <span>Applicant</span></a>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+            <a href="/blog" style="font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:600;color:var(--dark-text-muted);transition:color 0.2s;" onmouseover="this.style.color='var(--paper)'" onmouseout="this.style.color='var(--dark-text-muted)'">Blog</a>
+            <a href="/quiz" style="font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:600;color:var(--gold);transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Quiz</a>
+            <a href="https://buy.stripe.com/cNi00k9VAbXM3zr2l2fYY00" target="_blank" rel="noopener" class="nav-cta" onclick="trackPageEvent('checkout_initiated','nav','Get Access'); if(typeof fbq==='function')fbq('track','Lead');">Get Access &rarr;</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <span class="section-label">Free Quiz &middot; 5 Questions &middot; 2 Minutes</span>
+        <h1>Which ATS <em>Assassinated</em> Your Application?</h1>
+        <p class="hero-sub">Every rejection satisfies an algorithm somewhere. Five questions. Uncomfortably accurate results. Find out which system decided you weren't worth a human's time.</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="val">0.002s</div>
+                <div class="lbl">average time an ATS spends on your resume</div>
+            </div>
+            <div class="hero-stat">
+                <div class="val">75%</div>
+                <div class="lbl">of resumes rejected before a human sees them</div>
+            </div>
+            <div class="hero-stat">
+                <div class="val">$0</div>
+                <div class="lbl">the ATS paid for your 3 hours of work</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ -->
+    <div class="quiz-container">
+        <!-- Progress -->
+        <div class="progress-wrap" id="progressWrap">
+            <div class="progress-meta">
+                <span id="progressLabel">Question 1 of 5</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Question / Result Area -->
+        <div id="quizArea">
+            <!-- Dynamically populated by JS -->
+        </div>
+    </div>
+
+    <!-- ATS INTEL SECTION — SEO content targeting "which ATS is my company using" -->
+    <section class="ats-intel-section">
+        <h2>How to Find Out Which ATS Rejected Your Resume</h2>
+        <p class="ats-intel-intro">Most companies never tell you which Applicant Tracking System processed your application — because they don't think you need to know. But different ATS platforms reject resumes for completely different reasons, and most applicants never figure out which system filtered them out or why. Here's what the major systems are actually doing to your resume.</p>
+
+        <div class="ats-list">
+
+            <div class="ats-item">
+                <div class="ats-item-name">Workday</div>
+                <p class="ats-item-desc">Workday's machine learning ranks your resume against a profile built from the company's previous hires — which means every historical bias they've ever had is baked directly into your score. If they've never hired someone with your background before, the model treats you as an anomaly. Not a pioneer. An error.</p>
+                <a href="/workday-resume-rejected" class="ats-item-link">How to beat Workday ATS &rarr;</a>
+            </div>
+
+            <div class="ats-item">
+                <div class="ats-item-name">Taleo (Oracle)</div>
+                <p class="ats-item-desc">Oracle Taleo is one of the most widely deployed enterprise ATS platforms — and one of the worst at actually reading resumes. It pattern-matches keywords with the sophistication of a 2005 barcode scanner. Column layouts, tables, and custom formatting get mangled or dropped entirely before a human ever sees your name.</p>
+                <a href="/beat-taleo-ats" class="ats-item-link">How to beat Taleo ATS &rarr;</a>
+            </div>
+
+            <div class="ats-item">
+                <div class="ats-item-name">ADP Workforce Now</div>
+                <p class="ats-item-desc">ADP processes payroll for 1 in 6 American workers, and its ATS treats resume filtering like payroll processing — mechanical, literal, zero tolerance for variation. It matches exact strings. "JavaScript" and "Java-Script" are two different candidates. One gets through. One gets rejected. You probably know which one you were.</p>
+                <a href="/adp-ats-rejecting-resume" class="ats-item-link">How to beat ADP ATS &rarr;</a>
+            </div>
+
+            <div class="ats-item">
+                <div class="ats-item-name">Greenhouse &amp; Lever</div>
+                <p class="ats-item-desc">Greenhouse and Lever are actually decent at parsing resumes — your application makes it through intact. The bad news: you still didn't get the call. These systems pass you to a human recruiter who spends seven seconds on your profile and moves on. The algorithm isn't your problem here. The human is.</p>
+                <a href="/greenhouse-lever-ats" class="ats-item-link">How to beat Greenhouse &amp; Lever &rarr;</a>
+            </div>
+
+            <div class="ats-item">
+                <div class="ats-item-name">iCIMS</div>
+                <p class="ats-item-desc">iCIMS is used by large enterprises and staffing firms that need to process thousands of applications fast. Its keyword-matching logic is rigid — it scores your resume against exact phrases from the job description. Skills you have but didn't phrase identically to the posting simply don't register. Close enough doesn't count.</p>
+                <a href="/ats-resume-bypass" class="ats-item-link">How to bypass any ATS &rarr;</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 The Top Applicant Group, Inc. &middot; <a href="/">thetopapplicant.com</a> &middot; <a href="/quiz">Take the Quiz</a> &middot; <a href="/blog">Blog</a></p>
+    </footer>
+
+    <script>
+    // =========================================
+    // QUIZ DATA — Dark humor rewrite (Report #614608)
+    // Each answer maps to an ATS: A=Taleo, B=Workday, C=Greenhouse/Lever, D=ADP
+    // =========================================
+    const QUESTIONS = [
+        {
+            id: 1,
+            text: "You spent 3 hours perfecting your resume\u2019s formatting. Custom layout, clean columns, tasteful design. You hit submit. What happened?",
+            answers: [
+                { letter: "A", text: "The system read it as \u2018XJKDFJA_RESUME_PARSE_ERROR\u2019 and auto-rejected you for \u2018suspicious formatting.\u2019 Your tasteful columns were a war crime." },
+                { letter: "B", text: "The AI decided your resume \u2018lacked sufficient keyword density\u2019 because you used \u2018led\u2019 instead of \u2018managed.\u2019 Same thing. Doesn\u2019t matter." },
+                { letter: "C", text: "It actually parsed perfectly. A human recruiter spent 6 seconds on it and passed anyway. The ATS wasn\u2019t the problem. Somehow that\u2019s worse." },
+                { letter: "D", text: "The parser stripped all formatting, mashed your name into your phone number, and filed you under \u2018incomplete application.\u2019 You never got a chance to explain." }
+            ]
+        },
+        {
+            id: 2,
+            text: "You have 15 years of senior experience. You\u2019re applying two levels below your last title because you\u2019re pivoting. The ATS sees your resume and\u2026",
+            answers: [
+                { letter: "A", text: "Rejected. \u2018Candidate experience exceeds role parameters.\u2019 The system decided your 15 years of expertise made you worse at this job, not better." },
+                { letter: "B", text: "Flagged as a \u2018flight risk\u2019 and buried at the bottom of the pile. The algorithm decided you\u2019ll leave in 6 months. It didn\u2019t ask you." },
+                { letter: "C", text: "Passed to a recruiter who saw your last title, assumed you\u2019d want too much money, and archived you without a conversation. The system worked fine. The human didn\u2019t." },
+                { letter: "D", text: "Auto-rejected because your salary was \u2018inferred\u2019 from your title and deemed \u2018misaligned with compensation band.\u2019 You didn\u2019t even provide a salary." }
+            ]
+        },
+        {
+            id: 3,
+            text: "You got laid off in 2024. You took 8 months to recover, upskill, and start applying again. The ATS sees the gap on your resume and\u2026",
+            answers: [
+                { letter: "A", text: "\u2018Candidate inactive. Likely skills degraded.\u2019 Auto-reject. The system decided 8 months of learning was the same as 8 months of nothing." },
+                { letter: "B", text: "The AI ranked you lower because \u2018historical data shows candidates with gaps >6 months have 23% higher attrition.\u2019 You\u2019re a statistic now." },
+                { letter: "C", text: "A recruiter noticed and was sympathetic. Then their manager overruled them because the other candidate had \u2018no red flags.\u2019 Your gap was a red flag." },
+                { letter: "D", text: "The system couldn\u2019t calculate your \u2018years of continuous experience\u2019 and just gave you zero. Eight months off erased fifteen years on." }
+            ]
+        },
+        {
+            id: 4,
+            text: "You\u2019re transitioning from military to civilian work. You led 200 people, managed $40M in logistics, and made life-or-death decisions daily. The ATS reads your resume and\u2026",
+            answers: [
+                { letter: "A", text: "Can\u2019t match military jargon to civilian keywords. \u2018Platoon Leader\u2019 doesn\u2019t map to \u2018Project Manager.\u2019 Rejected for \u2018insufficient relevant experience.\u2019" },
+                { letter: "B", text: "The AI scored your leadership as \u2018non-traditional management background\u2019 and ranked you below a candidate with 2 years and a PMP cert." },
+                { letter: "C", text: "It parsed fine. The recruiter Googled your unit, couldn\u2019t figure out what you actually did, and moved on to someone whose resume required less thinking." },
+                { letter: "D", text: "Treated \u2018Combat Logistics Officer\u2019 as an unknown job title and categorized you under \u2018Other / Unclassified.\u2019 You managed $40M. You\u2019re now \u2018Unclassified.\u2019" }
+            ]
+        },
+        {
+            id: 5,
+            text: "Two candidates are equally qualified. Same skills, same experience, same education. One gets the interview. The other doesn\u2019t. What decided it?",
+            answers: [
+                { letter: "A", text: "One applied at 9:01 AM. The other at 9:03 AM. The system had already filled its interview slots. Two minutes decided a career." },
+                { letter: "B", text: "One wrote \u2018data-driven decision making\u2019 and the other wrote \u2018analytics.\u2019 The algorithm preferred the 4-word phrase. That\u2019s the whole reason." },
+                { letter: "C", text: "The recruiter recognized one candidate\u2019s university. Not consciously \u2014 just a flicker of familiarity that tipped the scale. The system was fair. The human wasn\u2019t." },
+                { letter: "D", text: "One resume was .docx and the other was .pdf. The parser mangled the PDF, dropping two jobs entirely. On paper, one candidate had 3 fewer years of experience." }
+            ]
+        }
+    ];
+
+    // A=Taleo, B=Workday, C=Greenhouse/Lever, D=ADP
+    const RESULTS = {
+        A: {
+            verdict: "You Got <span class='highlight'>Taleo\u2019d.</span>",
+            badge: "Oracle Taleo",
+            summary: "Taleo read your resume in 0.002 seconds and decided you weren\u2019t worth a closer look. This Oracle-owned dinosaur has been rejecting qualified candidates since 2005 with the parsing logic of a graphing calculator. It doesn\u2019t understand context. It doesn\u2019t weigh nuance. It just pattern-matches keywords and moves on. Your 3 hours of formatting? Irrelevant. Your career story? Unreadable. Taleo saw a wall of text, couldn\u2019t parse it, and threw you in the reject pile before you finished your morning coffee.",
+            article: "/beat-taleo-ats",
+            articleLabel: "Read Your Full Autopsy Report",
+            icon: "\uD83D\uDC80"
+        },
+        B: {
+            verdict: "Workday\u2019s AI Took <span class='highlight'>0.003 Seconds</span> to Reject You.",
+            badge: "Workday",
+            summary: "The algorithm doesn\u2019t explain itself \u2014 it just moves on. You didn\u2019t lose to a human. You lost to a black box that the hiring manager can\u2019t even debug. Workday\u2019s ML models ingest your resume, score it against a profile built from historical hires, and rank you accordingly. The problem? Those historical hires reflect every bias the company has ever had. If they\u2019ve never hired someone with your background before, the model treats you as an anomaly. Not a pioneer \u2014 an error.",
+            article: "/workday-resume-rejected",
+            articleLabel: "Read Your Full Autopsy Report",
+            icon: "\uD83E\uDD16"
+        },
+        C: {
+            verdict: "Greenhouse Processed You <span class='highlight'>Correctly.</span> That\u2019s Not Your Problem.",
+            badge: "Greenhouse / Lever",
+            summary: "Here\u2019s the dark truth: Greenhouse is actually good at parsing resumes. Your application went through cleanly. Your keywords matched. Your experience aligned. And you still didn\u2019t get the call. You lost to human bias, not algorithm error. A recruiter glanced at your profile for 7 seconds, made a gut decision shaped by pattern-matching they\u2019d never admit to, and moved on. Somehow, that\u2019s worse. At least with a broken parser you can blame the machine.",
+            article: "/greenhouse-lever-ats",
+            articleLabel: "Read Your Full Autopsy Report",
+            icon: "\uD83D\uDE36"
+        },
+        D: {
+            verdict: "ADP Rejected You Because of <span class='highlight'>How You Formatted One Word.</span>",
+            badge: "ADP Workforce Now",
+            summary: "ADP doesn\u2019t understand context. It just matches exact strings. You wrote \u2018Java-Script\u2019 instead of \u2018JavaScript\u2019? Auto-reject. Listed \u2018MS Excel\u2019 instead of \u2018Microsoft Excel\u2019? Doesn\u2019t count. ADP\u2019s ATS is built for volume \u2014 it processes payroll for 1 in 6 American workers \u2014 and it filters applications with the reading comprehension of a barcode scanner. Zero flexibility, zero inference, zero benefit of the doubt. Your resume was technically perfect. It was also technically wrong.",
+            article: "/adp-ats-rejecting-resume",
+            articleLabel: "Read Your Full Autopsy Report",
+            icon: "\u2699\uFE0F"
+        },
+        tie: {
+            verdict: "Every ATS <span class='highlight'>Took a Shot</span> at You. You Survived All of Them.",
+            badge: "Multiple ATS Systems",
+            summary: "Your answers span multiple ATS systems, which means you\u2019ve been through the gauntlet. Taleo corrupted your formatting. Workday\u2019s AI deprioritized you. ADP choked on a hyphen. Greenhouse passed you through and a human rejected you anyway. You didn\u2019t just get rejected \u2014 you got rejected by the full roster. The good news? There\u2019s a universal strategy that beats all of them. Your resume deserves better than a robot\u2019s 0.003-second judgment.",
+            article: "/blog/ats-resume-bypass",
+            articleLabel: "Read the ATS Bypass Guide",
+            icon: "\uD83C\uDFAF"
+        }
+    };
+
+    // =========================================
+    // STATE
+    // =========================================
+    let currentQuestion = 0;
+    let answers = []; // tracks { questionId, letter }
+
+    // =========================================
+    // RENDER FUNCTIONS
+    // =========================================
+    function updateProgress(questionIndex, isResult) {
+        const fill = document.getElementById('progressFill');
+        const label = document.getElementById('progressLabel');
+        const percent = document.getElementById('progressPercent');
+
+        if (isResult) {
+            fill.style.width = '100%';
+            label.textContent = 'Your Verdict';
+            percent.textContent = '100%';
+        } else {
+            const pct = ((questionIndex) / QUESTIONS.length) * 100;
+            fill.style.width = pct + '%';
+            label.textContent = `Question ${questionIndex + 1} of ${QUESTIONS.length}`;
+            percent.textContent = Math.round(pct) + '%';
+        }
+    }
+
+    function renderQuestion(qIndex) {
+        const q = QUESTIONS[qIndex];
+        const area = document.getElementById('quizArea');
+        updateProgress(qIndex, false);
+
+        const html = `
+            <div class="question-card" id="questionCard">
+                <div class="question-label">Question ${q.id}</div>
+                <div class="question-text">${q.text}</div>
+                <div class="answers">
+                    ${q.answers.map(a => `
+                        <button class="answer-btn" onclick="selectAnswer(${q.id}, '${a.letter}')" data-letter="${a.letter}">
+                            <span class="letter">${a.letter}</span>
+                            <span>${a.text}</span>
+                        </button>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        area.innerHTML = html;
+    }
+
+    function selectAnswer(questionId, letter) {
+        // Track answer
+        const existing = answers.find(a => a.questionId === questionId);
+        if (existing) existing.letter = letter;
+        else answers.push({ questionId, letter });
+
+        // Show loading shimmer, then next question
+        const area = document.getElementById('quizArea');
+        area.innerHTML = '<div class="shimmer"></div>';
+
+        setTimeout(() => {
+            const next = QUESTIONS.findIndex(q => q.id === questionId) + 1;
+            if (next < QUESTIONS.length) {
+                currentQuestion = next;
+                renderQuestion(next);
+            } else {
+                showResult();
+            }
+        }, 350);
+    }
+
+    function showResult() {
+        const counts = { A: 0, B: 0, C: 0, D: 0 };
+        answers.forEach(a => { if (counts[a.letter] !== undefined) counts[a.letter]++; });
+
+        const max = Math.max(...Object.values(counts));
+        const tied = Object.values(counts).filter(v => v === max).length > 1;
+
+        let resultKey = tied ? 'tie' : Object.entries(counts).find(([k, v]) => v === max)[0];
+        const result = RESULTS[resultKey];
+
+        updateProgress(currentQuestion, true);
+        const area = document.getElementById('quizArea');
+
+        area.innerHTML = `
+            <div class="result-card" id="resultCard">
+                <div class="result-label">Your Verdict Is In</div>
+                <div class="result-verdict">${result.verdict}</div>
+                <div class="result-ats-badge">
+                    <span>${result.icon}</span>
+                    ${result.badge}
+                </div>
+                <p class="result-summary">${result.summary}</p>
+
+                <div class="result-actions">
+                    <a href="${result.article}" class="btn-autopsy" onclick="trackClick('autopsy', '${result.article}'); if(typeof fbq==='function')fbq('track','Lead');">
+                        ${result.articleLabel}
+                        <span class="btn-autopsy-arrow">&rarr;</span>
+                    </a>
+
+                    <div class="result-divider">or fight back now</div>
+
+                    <a href="/" class="btn-autopsy" style="background:var(--gold);color:var(--accent);margin-top:0.5rem;" onclick="trackClick('funnel', '/'); if(typeof fbq==='function')fbq('track','Lead');">
+                        Your Resume Deserves Better &rarr;
+                        <span class="btn-autopsy-arrow">&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="result-share">
+                    <div class="share-label">Spread the Pain</div>
+                    <p class="share-text">Know someone whose resume got eaten alive by an ATS? Send them this quiz. Misery loves company \u2014 and company loves data-driven commiseration.</p>
+                    <button class="btn-retry" onclick="resetQuiz()">\u21BA Get Rejected Again</button>
+                </div>
+            </div>
+        `;
+
+        // Track quiz completion with result key for funnel segmentation
+        trackPageEvent('quiz_complete', 'quiz', '', { result_key: resultKey, ats_name: result.badge || resultKey });
+
+        // Show result card with animation delay
+        const card = document.getElementById('resultCard');
+        card.style.opacity = '0';
+        setTimeout(() => {
+            card.style.transition = 'opacity 0.5s ease';
+            card.style.opacity = '1';
+        }, 100);
+    }
+
+    function resetQuiz() {
+        currentQuestion = 0;
+        answers = [];
+        renderQuestion(0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // =========================================
+    // ANALYTICS
+    // =========================================
+    (function() {
+        var p = new URLSearchParams(window.location.search);
+        window._quizUtm = {
+            utm_source:   p.get('utm_source')   || '',
+            utm_medium:   p.get('utm_medium')   || '',
+            utm_campaign: p.get('utm_campaign') || '',
+            fbclid:       p.get('fbclid')       || ''
+        };
+    })();
+
+    function trackPageEvent(event_type, section, button_label, metadata) {
+        var payload = Object.assign({
+            event_type: event_type,
+            url: window.location.href,
+            page_url: window.location.href,
+            section: section || '',
+            button_label: button_label || '',
+            referrer: document.referrer
+        }, window._quizUtm);
+        if (metadata && typeof metadata === 'object') {
+            payload.metadata = metadata;
+        }
+        var json = JSON.stringify(payload);
+        // Use fetch as primary — sendBeacon with Blob silently fails in Facebook in-app browser
+        try {
+            fetch('/api/track', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: json,
+                keepalive: true
+            }).catch(function() {
+                // fetch failed — try sendBeacon as fallback
+                try { navigator.sendBeacon('/api/track', json); } catch(e) {}
+            });
+        } catch (e) {
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon('/api/track', new Blob([json], { type: 'application/json' }));
+            }
+        }
+    }
+
+    function trackClick(label, destUrl) {
+        // Stripe links = checkout_initiated; other links = cta_click
+        var isCheckout = destUrl && (destUrl.indexOf('buy.stripe.com') !== -1 || destUrl.indexOf('stripe.com') !== -1);
+        trackPageEvent(isCheckout ? 'checkout_initiated' : 'cta_click', 'quiz_result', label);
+    }
+
+    // =========================================
+    // INIT
+    // =========================================
+    trackPageEvent('pageview', 'quiz');
+    trackPageEvent('quiz_start', 'quiz');
+    renderQuestion(0);
+    </script>
+</body>
+</html>

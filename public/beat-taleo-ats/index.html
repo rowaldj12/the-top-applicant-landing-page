@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content=width=device-width,initial-scale=1.0>
+    <title>How to Beat Taleo's ATS (And Why It's Rigged Against You)</title>
+    <meta name=description content='Taleo rejects qualified candidates every day — not because they lack skills, but because their resume format fails parsing. This is how to make Taleo actually read your resume.'>
+    <link rel=canonical href=/beat-taleo-ats>
+    <link rel=preconnect href=https://fonts.googleapis.com>
+    <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap' rel=stylesheet>
+
+    <!-- Open Graph -->
+    <meta property=og:title content='How to Beat Taleo ATS (And Why It Is Rigged Against You)'>
+    <meta property=og:description content='Taleo rejects qualified candidates every day. Learn why — and how to make it actually read your resume.'>
+    <meta property=og:url content=/beat-taleo-ats>
+    <meta property=og:type content=article>
+    <meta property=article:published_time content=2026-05-01>
+
+    <style>
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --ink:#0a0a0a;--paper:#faf9f7;--accent:#1a3a2a;--accent-mid:#2d5a3f;--accent-light:#3d7a55;
+            --gold:#c8a84e;--gold-soft:#f5ecd4;--gold-dim:#a8882e;--white:#ffffff;
+            --gray-50:#f8f7f5;--gray-100:#f0efed;--gray-200:#e0deda;--gray-300:#c5c3bf;
+            --gray-500:#8a8884;--gray-700:#4a4845;--red:#c0392b;--red-soft:#fdf0ef;
+        }
+        html{scroll-behavior:smooth}
+        body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+        a{color:inherit;text-decoration:none}
+
+        nav{
+            display:flex;justify-content:space-between;align-items:center;
+            padding:1.25rem 4rem;position:fixed;top:0;left:0;right:0;z-index:200;
+            background:rgba(250,249,247,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-100);
+        }
+        .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;letter-spacing:-0.5px;color:var(--accent)}
+        .logo span{color:var(--gold)}
+        .nav-cta{
+            display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent);color:white;
+            font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:600;
+            padding:0.6rem 1.4rem;border-radius:100px;transition:background 0.2s;
+        }
+        .nav-cta:hover{background:var(--accent-mid)}
+
+        .article-wrapper{max-width:760px;margin:0 auto;padding:8rem 2rem 4rem}
+        .article-meta{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
+        .article-tag{
+            font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:600;
+            letter-spacing:2px;text-transform:uppercase;color:var(--gold);
+            background:var(--gold-soft);border:1px solid var(--gold);border-radius:100px;
+            padding:0.25rem 0.85rem;
+        }
+        .article-date,.article-read{font-size:0.82rem;color:var(--gray-500)}
+
+        h1.article-title{
+            font-family:'Space Grotesk',sans-serif;font-weight:700;
+            font-size:clamp(2rem,4.5vw,3.25rem);line-height:1.1;
+            letter-spacing:-1px;color:var(--accent);margin-bottom:1.5rem;
+        }
+        .article-lead{
+            font-size:1.2rem;color:var(--gray-700);line-height:1.7;
+            border-left:4px solid var(--red);padding-left:1.25rem;margin-bottom:3rem;
+        }
+
+        .article-body h2{
+            font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;
+            color:var(--accent);margin:2.5rem 0 1rem;line-height:1.25;
+        }
+        .article-body h3{
+            font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.15rem;
+            color:var(--accent-mid);margin:2rem 0 0.75rem;
+        }
+        .article-body p{font-size:1.05rem;line-height:1.8;color:#2a2a2a;margin-bottom:1.25rem}
+        .article-body strong{color:var(--accent)}
+        .article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.25rem}
+        .article-body li{font-size:1.05rem;line-height:1.8;color:#2a2a2a;margin-bottom:0.4rem}
+
+        .callout{
+            background:var(--gold-soft);border:1px solid var(--gold);border-radius:12px;
+            padding:1.5rem 1.75rem;margin:2rem 0;
+        }
+        .callout p{margin:0;font-size:1.02rem}
+        .callout strong{color:var(--accent)}
+
+        .rant-box{
+            background:var(--ink);border-radius:12px;padding:1.75rem 2rem;margin:2rem 0;
+            color:white;
+        }
+        .rant-box p{color:rgba(255,255,255,0.85);font-size:1.1rem;line-height:1.75}
+        .rant-box strong{color:var(--gold)}
+
+        .stat-box{
+            background:var(--accent);color:white;border-radius:12px;
+            padding:1.5rem 1.75rem;margin:2rem 0;text-align:center;
+        }
+        .stat-box .stat-number{
+            font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:3rem;
+            color:var(--gold);line-height:1;margin-bottom:0.5rem;
+        }
+        .stat-box p{color:rgba(255,255,255,0.8);font-size:0.95rem;margin:0}
+
+        .warn-box{
+            background:var(--red-soft);border:1px solid var(--red);border-radius:12px;
+            padding:1.5rem 1.75rem;margin:2rem 0;
+        }
+        .warn-box p{margin:0;font-size:1.02rem;color:#7a1a1a}
+        .warn-box strong{color:var(--red)}
+
+        .step-list{
+            list-style:none;padding:0;margin:1.5rem 0;
+            counter-reset:step-counter;
+        }
+        .step-list li{
+            counter-increment:step-counter;
+            display:flex;gap:1.25rem;margin-bottom:1.5rem;
+            font-size:1.05rem;line-height:1.75;color:#2a2a2a;
+        }
+        .step-list li::before{
+            content:counter(step-counter);
+            font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.25rem;
+            color:var(--gold);background:var(--gold-soft);border:1px solid var(--gold);
+            border-radius:50%;width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;
+            flex-shrink:0;margin-top:0.1rem;
+        }
+
+        .article-cta{
+            background:var(--accent);border-radius:16px;padding:2.5rem;
+            text-align:center;margin:3rem 0;
+        }
+        .article-cta h3{
+            font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;
+            color:white;margin-bottom:0.75rem;
+        }
+        .article-cta p{color:rgba(255,255,255,0.75);font-size:0.95rem;margin-bottom:1.75rem}
+        .btn-gold{
+            display:inline-flex;align-items:center;gap:0.5rem;
+            background:var(--gold);color:var(--accent);
+            font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;
+            padding:1rem 2.25rem;border-radius:100px;transition:background 0.2s,transform 0.15s;
+        }
+        .btn-gold:hover{background:var(--gold-dim);transform:translateY(-1px)}
+        .btn-tag{font-size:0.72rem;opacity:0.75}
+        .cta-options{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.25rem}
+        .cta-alt{
+            display:inline-flex;align-items:center;gap:0.4rem;
+            background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.25);
+            font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.875rem;
+            padding:0.75rem 1.5rem;border-radius:100px;transition:background 0.2s;
+        }
+        .cta-alt:hover{background:rgba(255,255,255,0.2)}
+
+        .article-divider{border:none;border-top:1px solid var(--gray-200);margin:2.5rem 0}
+
+        .breadcrumb{font-size:0.82rem;color:var(--gray-500);margin-bottom:1.5rem;display:flex;gap:0.4rem;align-items:center}
+        .breadcrumb a{color:var(--accent-mid)}
+        .breadcrumb a:hover{color:var(--gold-dim)}
+
+        .related-section{padding:3rem 0;border-top:1px solid var(--gray-200)}
+        .related-section h4{
+            font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;
+            color:var(--gray-700);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:1.5rem;
+        }
+        .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+        .related-card{
+            background:var(--white);border:1px solid var(--gray-100);border-radius:12px;
+            padding:1.25rem;transition:box-shadow 0.2s;
+        }
+        .related-card:hover{box-shadow:0 6px 24px rgba(26,58,42,0.1)}
+        .related-card .rtag{font-family:'Space Grotesk',sans-serif;font-size:0.66rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+        .related-card h5{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.95rem;color:var(--accent);line-height:1.3}
+
+        .taleo-badge{
+            display:inline-flex;align-items:center;gap:0.4rem;
+            background:#e8e0f0;border:1px solid #8b7fad;border-radius:8px;
+            padding:0.25rem 0.75rem;font-size:0.8rem;color:#4a3a6e;font-weight:600;
+            font-family:'Space Grotesk',sans-serif;
+        }
+
+        footer{
+            background:#0f2419;padding:2rem 4rem;
+            display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+        }
+        footer p{font-size:0.8rem;color:rgba(255,255,255,0.4)}
+        footer a{color:rgba(255,255,255,0.5);font-size:0.8rem}
+        footer a:hover{color:var(--gold)}
+
+        @media(max-width:768px){
+            nav{padding:1rem 1.5rem}
+            .article-wrapper{padding:6.5rem 1.25rem 3rem}
+            .related-grid{grid-template-columns:1fr}
+            footer{padding:1.5rem;flex-direction:column;text-align:center}
+            .cta-options{flex-direction:column;align-items:center}
+            .bcf-actions{flex-direction:column;align-items:center}
+        }
+        .bcf{background:var(--ink);padding:3.5rem 2rem;margin-top:0}
+        .bcf-inner{max-width:660px;margin:0 auto;text-align:center}
+        .bcf-eyebrow{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+        .bcf h3{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;color:white;margin-bottom:1rem;line-height:1.25}
+        .bcf p{color:rgba(255,255,255,0.55);font-size:0.875rem;margin-bottom:1.25rem;line-height:1.65}
+        .bcf-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.25rem}
+        .bcf-btn-primary{display:inline-flex;align-items:center;background:var(--gold);color:var(--accent);font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:700;padding:0.85rem 1.75rem;border-radius:8px;letter-spacing:-0.01em;transition:background 0.2s}
+        .bcf-btn-primary:hover{background:var(--gold-dim)}
+        .bcf-btn-secondary{display:inline-flex;align-items:center;background:transparent;color:rgba(255,255,255,0.65);font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:600;padding:0.85rem 1.75rem;border-radius:8px;border:1px solid rgba(255,255,255,0.18);transition:all 0.2s}
+        .bcf-btn-secondary:hover{background:rgba(255,255,255,0.07)}
+        .bcf-note{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-bottom:0}
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href=/ class=logo>The Top <span>Applicant</span></a>
+    <div style="display:flex;gap:1.5rem;align-items:center;">
+        <a href=/blog style="font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:600;color:var(--gray-500)">Blog</a>
+        <a href=/quiz style="font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:600;color:var(--gold-dim)">Quiz 🎯</a>
+        <a href=/ class=nav-cta>Beat Taleo →</a>
+    </div>
+</nav>
+
+<article class=article-wrapper>
+
+    <nav class=breadcrumb>
+        <a href=/>Home</a>
+        <span>›</span>
+        <a href=/blog>Blog</a>
+        <span>›</span>
+        <span>How to Beat Taleo ATS</span>
+    </nav>
+
+    <div class=article-meta>
+        <span class=article-tag>Taleo Strategy</span>
+        <span class=taleo-badge>
+            <svg width=14 height=14 viewBox='0 0 24 24' fill=none stroke=currentColor stroke-width=2.5'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>
+            Oracle Taleo
+        </span>
+        <span class=article-date>May 1, 2026</span>
+        <span class=article-read>· 11 min read</span>
+    </div>
+
+    <h1 class=article-title>How to Beat Taleo's ATS<br>(And Why It's Rigged Against You)</h1>
+
+    <p class=article-lead>
+        You're not imagining it. Taleo <em>is</em> filtering you out before a human ever reads your name.
+    </p>
+
+    <div class=article-body>
+
+        <p>You spent two hours tailoring your resume for a role you're genuinely qualified for. You hit submit. You wait. You check your email. Nothing. Not a rejection — just silence. That's actually worse.</p>
+
+        <p>Here's what actually happened: your resume went into Oracle Taleo, the ATS used by over 65% of Fortune 500 companies. Taleo parsed it, scored it against the job description's keyword matrix, and buried it — never to be seen by a recruiter.</p>
+
+        <p>You didn't lose to competition. You lost to a scoring algorithm.</p>
+
+        <div class=stat-box>
+            <div class=stat-number>75%</div>
+            <p>of resumes submitted through Taleo are rejected before a recruiter ever opens the candidate file</p>
+        </div>
+
+        <!-- SECTION 1: THE SYSTEM IS RIGGED -->
+        <h2>The System Is Rigged — Here's Why</h2>
+
+        <p>Taleo isn't an ATS in the sense people imagine. It's a keyword-scoring machine with a resume-parsing layer built on top. When you submit, Taleo breaks your resume into extracted data points, matches them against weighted criteria, and assigns a score. Candidates below the threshold get soft-rejected — the system flags them, and no human sees them unless the recruiter manually expands the candidate pool.</p>
+
+        <p>The brutal truth most career advice won't tell you: <strong>Taleo was built to protect companies from bad hires, not to find great candidates.</strong> It's risk-averse by design. A maybe-candidate gets filtered out so the recruiter doesn't have to review them. Your qualifications don't matter if the parser didn't see them the right way.</p>
+
+        <div class=rant-box>
+            <p><strong>Think about what that means.</strong> Companies spent millions building a system to automatically reject qualified people. Not bad people — just people whose resumes didn't parse correctly. If a system automatically filtered out 3 out of 4 qualified applicants before anyone saw them, and you told HR about it, they'd call it a bug. Taleo calls it a feature.</p>
+        </div>
+
+        <h3>What Taleo Actually Scores</h3>
+
+        <p>Taleo uses a weighted keyword matching system. Every job requisition has a scoring profile — a list of keywords and phrases with assigned weights. Your resume is scored against that profile. Here's what moves your score up or down:</p>
+
+        <ul>
+            <li><strong>Exact keyword matches</strong> — If the job description says Python and you wrote Python, you score. If you wrote Py, you might not.</li>
+            <li><strong>Section header recognition</strong> — Taleo has specific headers it looks for: <code>Work Experience</code>, <code>Education</code>, <code>Skills</code>. If your section headers don't match its taxonomy, they're ignored or mis-parsed.</li>
+            <li><strong>Title normalization</strong> — Taleo normalizes your job titles against a standard taxonomy. If your title is non-standard or localized, the score drops.</li>
+            <li><strong>Hard requirements filtering</strong> — If a requisition flags a degree as required and you don't have one listed, you're automatically rejected regardless of score. This happens before any human involvement.</li>
+            <li><strong>Keyword density</strong> — Too few keywords and you score low. Too many (keyword stuffing) and Taleo's spam detection triggers a rejection.</li>
+        </ul>
+
+        <div class=warn-box>
+            <p><strong>Formatting kills more resumes than bad content.</strong> Taleo uses a template-based parser. If your resume uses multi-column layouts, tables, text boxes, icons, or unusual section headers, the parser will extract garbled data or skip entire sections. A resume that looks great to a human can score 20% to a machine.</p>
+        </div>
+
+        <!-- SECTION 2: THE FORMATTING TRAPS -->
+        <h2>The Four Formatting Traps That Destroy Taleo Scores</h2>
+
+        <p>These are the most common reasons qualified candidates get filtered out of Taleo — and most career coaches never mention them.</p>
+
+        <h3>1. Multi-Column Layouts</h3>
+
+        <p>Taleo reads top-to-bottom in a single pass. A two-column or three-column resume — which looks modern and clean to a human — gets parsed as a jumbled mess. Taleo reads your name, then grabs a random chunk of text from a sidebar, then continues from the main column. The data sequence makes no sense, and the scoring algorithm fails.</p>
+
+        <p><strong>The fix:</strong> Single column layout only. No sidebars, no grids, no two-column experience blocks.</p>
+
+        <h3>2. Non-Standard Section Headers</h3>
+
+        <p>Taleo's parser is trained on standard corporate headers. It recognizes <em>Work Experience</em>, <em>Professional Experience</em>, <em>Employment</em> — but may not recognize <em>Where I've Been</em>, <em>My Journey</em>, or <em>Career Timeline</em>. If it doesn't recognize the header, it doesn't parse the content below it correctly.</p>
+
+        <p><strong>The fix:</strong> Use the most boring, standard section headers possible. Taleo was built for boring.</p>
+
+        <h3>3. Graphics, Icons, and Visual Elements</h3>
+
+        <p>Any image, icon, logo, or graphic on your resume gets treated as an unreadable binary blob. Taleo skips it. Fine. But if your skills section uses icons (like a star rating for proficiency or a software icon grid), Taleo will skip those sections entirely.</p>
+
+        <p><strong>The fix:</strong> Pure text. No icons in section headers, no skill proficiency bars, no logos.</p>
+
+        <h3>4. PDF vs. DOCX — It Matters</h3>
+
+        <p>Taleo's PDF parser is notoriously unreliable. Complex PDFs — especially those built in Word and saved as PDF, or those with custom fonts — often render as blank pages in Taleo's parsing view. The resume looks fine to you. Taleo sees nothing.</p>
+
+        <p><strong>The fix:</strong> Submit as .docx unless the job posting specifically requires PDF. If PDF is required, test it by sending it to yourself and checking how it renders in your email client preview.</p>
+
+        <div class=callout>
+            <p><strong>The core problem:</strong> Taleo was designed by enterprise HR teams for enterprise HR workflows. It wasn't designed to give you a fair shot. It was designed to reduce the volume of resumes a recruiter has to review. Those two goals are not the same thing — and your job search pays the price.</p>
+        </div>
+
+        <!-- SECTION 3: ASYMMETRIC WARFARE -->
+        <h2>Stop Playing Defense. Play Asymmetric.</h2>
+
+        <p>Here's the thing about Taleo: it was built to filter out candidates. Companies spent millions on it. HR departments convinced themselves it was working. And for years, job seekers just accepted that the system was broken and dealt with it.</p>
+
+        <p>That's over now.</p>
+
+        <p>The game changed when AI started reverse-engineering these systems. Instead of submitting a resume and hoping for the best, you can now study exactly what Taleo is scoring for a specific job requisition — and rebuild your resume to optimize for that exact scoring profile.</p>
+
+        <div class=rant-box>
+            <p>Companies spent millions building a system to automatically filter you out. <strong>The same technology is now available on your side of the table.</strong> Stop playing by rules designed to eliminate you. Learn the scoring system. Exploit it. Get human eyes on your resume — which is the entire point.</p>
+        </div>
+
+        <h3>The Taleo Keyword Extraction Process</h3>
+
+        <p>When a recruiter creates a job requisition in Taleo, they paste in a job description. Taleo's system extracts keywords from that description and assigns them weights. Those weighted keywords become the scoring criteria.</p>
+
+        <p>That job description is publicly accessible. It tells you exactly what Taleo is going to score you on. You just have to know how to read it — and more importantly, you have to know how to get those exact keywords into your resume in a way that parses correctly.</p>
+
+        <p>That's not keyword stuffing. That's targeted optimization. There's a real difference.</p>
+
+        <h3>What HR Recruiters Are Actually Saying About Taleo</h3>
+
+        <p>Here's something career coaches won't tell you: <strong>recruiters hate Taleo too.</strong> They know it filters out good candidates. They know it rewards keyword-optimized resumes over genuine qualifications. And they have to work with it anyway because it's the system their company bought.</p>
+
+        <p>Internal surveys at major corporations consistently show that recruiters estimate 20-40% of qualified candidates are filtered out by the ATS before they ever see the resume. Some estimates go higher. The system is broken — and HR knows it.</p>
+
+        <p>That means the goal isn't just to beat Taleo. The goal is to get a human to see your resume, because once a human sees it, the ATS doesn't matter anymore. You just have to get there.</p>
+
+        <div class=stat-box>
+            <div class=stat-number>3/4</div>
+            <p>of The Top Applicant users land an interview within 2–3 weeks — specifically because we optimize for Taleo's scoring system before submission</p>
+        </div>
+
+        <!-- SECTION 4: THE SOLUTION -->
+        <h2>How to Actually Win Against Taleo</h2>
+
+        <p>There are three layers to beating Taleo. Most advice stops at layer one.</p>
+
+        <h3>Layer 1: Formatting (The Baseline)</h3>
+
+        <p>You can't win if your resume doesn't parse correctly. Before anything else, make sure your resume:</p>
+        <ul>
+            <li>Uses single-column layout</li>
+            <li>Has standard section headers (<code>Work Experience</code>, <code>Education</code>, <code>Skills</code>)</li>
+            <li>Uses standard fonts (Arial, Calibri, Times New Roman)</li>
+            <li>Submits as .docx when possible</li>
+            <li>Contains zero images, icons, or graphics</li>
+            <li>Places contact info in the document body, not the header</li>
+        </ul>
+
+        <h3>Layer 2: Keyword Architecture</h3>
+
+        <p>This is where most candidates lose. Taleo scores based on keyword density and placement. Your resume needs to contain the exact keywords from the job description — in the right sections, in the right format.</p>
+
+        <p>The key is precision: exact matches score, partial matches don't. If the job description says <em>stakeholder management</em>, writing <em>managing stakeholder relationships</em> is not the same thing to Taleo. It sees different tokens.</p>
+
+        <h3>Layer 3: Strategic Structure</h3>
+
+        <p>Once the keywords are in place, Taleo weights where they appear. Keywords in your summary/professional headline carry more weight than those buried in bullet points. Keywords in job titles (especially if they match standard Taleo taxonomy) carry more weight than keywords in the body text.</p>
+
+        <p>Getting the structure right — which keywords go where, in what format, with what density — is what separates a resume that passes from one that ranks.</p>
+
+        <div class=callout>
+            <p><strong>The problem isn't that you're unqualified.</strong> The problem is that Taleo parsed your resume incorrectly, scored it low, and buried it. Fix the parsing — which is entirely a function of formatting and keyword placement — and the score changes. The qualifications were there all along.</p>
+        </div>
+
+        <!-- SECTION 5: THE SHORTCUT -->
+        <h2>The Fastest Way to Beat Taleo</h2>
+
+        <p>Manual optimization is possible — if you have hours to spend on one application, know how Taleo parses, and can build a resume from scratch for every job. Most people don't have that time, and the learning curve is steep.</p>
+
+        <p>That's why we built The Top Applicant.</p>
+
+        <p>Instead of generic resume advice, we analyze the actual job description — extract the Taleo scoring criteria — and rebuild your resume specifically for that requisition. Not a template. Not ChatGPT with a resume prompt. A career architect that reverse-engineers what Taleo is looking for and makes sure your resume hits every scoring point — without looking like keyword stuffing to a human reviewer.</p>
+
+        <p>The same AI corporations use to screen you out? We put it to work on your behalf.</p>
+
+        <ul>
+            <li>Parses the job description and extracts Taleo's weighted keywords</li>
+            <li>Rebuilds your resume with exact keyword matches in the right format</li>
+            <li>Optimizes section structure for Taleo's parsing priority hierarchy</li>
+            <li>Produces a document that reads well to humans and scores high to Taleo simultaneously</li>
+            <li>Writes your cover letter with the same keyword optimization</li>
+            <li>Optimizes your LinkedIn headline for recruiter search algorithms</li>
+        </ul>
+
+        <p>Not a template. Not a prompt. A system designed to win.</p>
+
+        <hr class=article-divider>
+
+        <h2>The Taleo Score Checklist</h2>
+
+        <p>Before you submit any application through Taleo, run through this:</p>
+
+        <ol class=step-list>
+            <li>I copied exact keywords from the job description into my Skills section</li>
+            <li>My section headers use standard corporate terminology (Work Experience, not creative alternatives)</li>
+            <li>My resume is single-column, no columns, no sidebars</li>
+            <li>I'm submitting as .docx unless the posting specifically requires PDF</li>
+            <li>My contact info is in the body text, not the document header</li>
+            <li>I used the exact job title language (not synonyms) for my most recent role</li>
+            <li>I've removed all icons, images, and visual elements</li>
+            <li>My summary/headline contains the 2-3 most heavily weighted keywords from the job description</li>
+        </ol>
+
+        <p>If you're not doing all eight of these, Taleo is filtering you out before a human sees you. Fix it.</p>
+
+        <div class=article-cta>
+            <h3>Stop letting Taleo decide your fate.</h3>
+            <p>The Top Applicant optimizes every resume specifically for the job you're applying to. 3 out of 4 users land an interview within 2–3 weeks.</p>
+            <a href=/ class=btn-gold>
+                Beat Taleo. Get Hired. →
+                <span class=btn-tag>$29/mo · 7-day free trial</span>
+            </a>
+            <div class=cta-options>
+                <a href=/ class=cta-alt>
+                    Or $149 lifetime — no subscriptions
+                </a>
+            </div>
+            <p style="margin-top:0.85rem;font-size:0.73rem;color:rgba(255,255,255,0.4);text-align:center;">Other builders store your resume data forever and sell it to recruiters. We delete yours after download.</p>
+        </div>
+
+        <hr class=article-divider>
+
+        <p><em>The Top Applicant is a veteran-owned career platform. We build ATS-optimized, job-specific resumes. Zero data sold. No templates. Just results.</em></p>
+
+        <div class=article-cta style=margin-top:2rem>
+            <h3>Not sure which ATS rejected you?</h3>
+            <p>Take the 5-question quiz to find out exactly which system filtered out your application — and get a personalized fix.</p>
+            <a href=/quiz class=btn-gold style=background:var(--gold);color:var(--accent)>
+                🔫 Take the ATS Quiz →
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Related Articles -->
+    <div class=related-section>
+        <h4>Keep reading</h4>
+        <div class=related-grid>
+            <a href=/workday-resume-rejected class=related-card>
+                <div class=rtag>Workday Strategy</div>
+                <h5>Why Workday Keeps Rejecting Your Resume (It's Not You — It's the System)</h5>
+            </a>
+            <a href=/greenhouse-lever-ats class=related-card>
+                <div class=rtag>Startup ATS</div>
+                <h5>Greenhouse & Lever: How Startup ATS Filters Dump Your Application</h5>
+            </a>
+            <a href=/adp-ats-rejecting-resume class=related-card>
+                <div class=rtag>ADP Strategy</div>
+                <h5>How ADP's ATS Is Silently Rejecting Your Resume</h5>
+            </a>
+            <a href=/quiz class=related-card>
+                <div class=rtag>Quiz</div>
+                <h5>🔫 Which ATS Assassinated Your Application? (5-Question Quiz)</h5>
+            </a>
+        </div>
+    </div>
+
+</article>
+
+<!-- Blog CTA Footer -->
+<div class=bcf>
+    <div class=bcf-inner>
+        <div class=bcf-eyebrow>The fix you actually need</div>
+        <h3>Other resume builders store your data forever and sell it to recruiters. We delete yours.</h3>
+        <p>No ads. No data brokering. No monthly hostage fees. <strong style=color:white>$149 once</strong> — vs. the $348/year legacy builders quietly bill you for. One price. No tricks.</p>
+        <div class=bcf-actions>
+            <a href=https://buy.stripe.com/3cI3cwffU6Dsc5XcZGfYY01 class=bcf-btn-primary>Get Lifetime Access — $149 →</a>
+            <a href=https://buy.stripe.com/cNi00k9VAbXM3zr2l2fYY00 class=bcf-btn-secondary>Start Monthly — $29/mo →</a>
+        </div>
+        <p class=bcf-note>4-day free trial on monthly · 30-day money-back guarantee · Zero data retained. Ever.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 The Top Applicant Group, Inc. Veteran-owned. No data sold. Ever.</p>
+    <div style=display:flex;gap:1.5rem;>
+        <a href=/>Home</a>
+        <a href=/blog>Blog</a>
+        <a href=/>Get Started</a>
+    </div>
+</footer>
+
+
+<script type="module" src="/firebase-app.js"></script>
+
+</body>
+</html>

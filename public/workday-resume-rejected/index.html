@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Workday Keeps Rejecting Your Resume (It's Not You — It's the System) — The Top Applicant</title>
+    <meta name="description" content="You spent 45 minutes filling out Workday. You're qualified. You got auto-rejected in 6 seconds. Here's why — and how to stop playing by their rules.">
+    <link rel="canonical" href="/workday-resume-rejected" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Why Workday Keeps Rejecting Your Resume (It's Not You — It's the System)" />
+    <meta property="og:description" content="You spent 45 minutes filling out Workday. You're qualified. You got auto-rejected in 6 seconds. Here's why — and how to stop playing by their rules." />
+    <meta property="og:url" content="/workday-resume-rejected" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-05-02" />
+    <meta property="og:image" content="/og-workday.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Why Workday Keeps Rejecting Your Resume" />
+    <meta name="twitter:description" content="You spent 45 minutes filling out Workday. You're qualified. You got auto-rejected in 6 seconds." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ink: #0a0a0a; --paper: #faf9f7; --accent: #1a3a2a; --accent-mid: #2d5a3f; --accent-light: #3d7a55;
+            --gold: #c8a84e; --gold-soft: #f5ecd4; --gold-dim: #a8882e; --white: #ffffff;
+            --gray-50: #f8f7f5; --gray-100: #f0efed; --gray-200: #e0deda; --gray-300: #c5c3bf;
+            --gray-500: #8a8884; --gray-700: #4a4845; --red-alert: #c0392b; --red-soft: #fdf2f2;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.25rem 4rem; position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+            background: rgba(250,249,247,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--gray-100);
+        }
+        .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; color: var(--accent); }
+        .logo span { color: var(--gold); }
+        .nav-cta {
+            display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent); color: white;
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 600;
+            padding: 0.6rem 1.4rem; border-radius: 100px; transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--accent-mid); }
+
+        /* ARTICLE LAYOUT */
+        .article-wrapper {
+            max-width: 760px; margin: 0 auto; padding: 8rem 2rem 4rem;
+        }
+        .article-meta {
+            display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;
+        }
+        .article-tag {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600;
+            letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+            background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 100px;
+            padding: 0.25rem 0.85rem;
+        }
+        .article-date { font-size: 0.82rem; color: var(--gray-500); }
+        .article-read { font-size: 0.82rem; color: var(--gray-500); }
+
+        h1.article-title {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1.1;
+            letter-spacing: -0.8px; color: var(--accent); margin-bottom: 1.5rem;
+        }
+        .article-lead {
+            font-size: 1.2rem; color: var(--gray-700); line-height: 1.75;
+            border-left: 4px solid var(--gold); padding-left: 1.25rem; margin-bottom: 3rem;
+        }
+
+        /* ARTICLE BODY */
+        .article-body h2 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.6rem;
+            color: var(--accent); margin: 2.5rem 0 1rem; line-height: 1.25;
+        }
+        .article-body h3 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.15rem;
+            color: var(--accent-mid); margin: 2rem 0 0.75rem;
+        }
+        .article-body p { font-size: 1.05rem; line-height: 1.8; color: #2a2a2a; margin-bottom: 1.25rem; }
+        .article-body strong { color: var(--accent); }
+        .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .article-body li { font-size: 1.05rem; line-height: 1.8; color: #2a2a2a; margin-bottom: 0.5rem; }
+
+        .callout {
+            background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 12px;
+            padding: 1.5rem 1.75rem; margin: 2rem 0;
+        }
+        .callout p { margin: 0; font-size: 1.02rem; }
+        .callout strong { color: var(--accent); }
+
+        .stat-box {
+            background: var(--accent); color: white; border-radius: 12px;
+            padding: 1.5rem 1.75rem; margin: 2rem 0; text-align: center;
+        }
+        .stat-box .stat-number {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 3rem;
+            color: var(--gold); line-height: 1; margin-bottom: 0.5rem;
+        }
+        .stat-box p { color: rgba(255,255,255,0.8); font-size: 0.95rem; margin: 0; }
+
+        .red-alert-box {
+            background: var(--red-soft); border: 1px solid var(--red-alert); border-radius: 12px;
+            padding: 1.5rem 1.75rem; margin: 2rem 0;
+        }
+        .red-alert-box p { color: var(--red-alert); margin: 0; font-size: 1.02rem; font-weight: 500; }
+
+        .quote-block {
+            border-left: 4px solid var(--accent); padding: 1.25rem 1.75rem;
+            background: var(--gray-50); border-radius: 0 12px 12px 0; margin: 2rem 0;
+        }
+        .quote-block p { font-size: 1.1rem; font-style: italic; color: var(--gray-700); margin: 0 0 0.5rem; }
+        .quote-block cite { font-size: 0.85rem; color: var(--gray-500); font-style: normal; }
+
+        /* DIVIDER */
+        .article-divider { border: none; border-top: 1px solid var(--gray-200); margin: 2.5rem 0; }
+
+        /* ARTICLE CTA */
+        .article-cta {
+            background: var(--accent); border-radius: 16px; padding: 2.5rem;
+            text-align: center; margin: 3rem 0;
+        }
+        .article-cta h3 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem;
+            color: white; margin-bottom: 0.75rem;
+        }
+        .article-cta p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 1.75rem; }
+        .article-cta-sub { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-top: 0.75rem; }
+        .btn-gold {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--gold); color: var(--accent);
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem;
+            padding: 1rem 2.25rem; border-radius: 100px; transition: background 0.2s, transform 0.15s;
+            margin: 0.5rem;
+        }
+        .btn-gold:hover { background: var(--gold-dim); transform: translateY(-1px); }
+        .btn-gold-outline {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: transparent; color: var(--gold); border: 2px solid var(--gold);
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem;
+            padding: 0.9rem 2.25rem; border-radius: 100px; transition: all 0.2s;
+            margin: 0.5rem;
+        }
+        .btn-gold-outline:hover { background: var(--gold-soft); }
+
+        .btn-tag { font-size: 0.72rem; opacity: 0.75; margin-left: 0.5rem; }
+
+        /* BREADCRUMB */
+        .breadcrumb { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+        .breadcrumb a { color: var(--accent-mid); }
+        .breadcrumb a:hover { color: var(--gold-dim); }
+
+        /* RELATED */
+        .related-section { padding: 3rem 0; border-top: 1px solid var(--gray-200); }
+        .related-section h4 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem;
+            color: var(--gray-700); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1.5rem;
+        }
+        .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .related-card {
+            background: var(--white); border: 1px solid var(--gray-100); border-radius: 12px;
+            padding: 1.25rem; transition: box-shadow 0.2s;
+        }
+        .related-card:hover { box-shadow: 0 6px 24px rgba(26,58,42,0.1); }
+        .related-card .rtag { font-family: 'Space Grotesk', sans-serif; font-size: 0.66rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+        .related-card h5 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--accent); line-height: 1.3; }
+
+        /* WRATH BOX */
+        .wrath-box {
+            background: var(--ink); color: white; border-radius: 16px; padding: 2rem 2.25rem;
+            margin: 2.5rem 0; border-left: 6px solid var(--red-alert);
+        }
+        .wrath-box h3 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.4rem;
+            color: var(--gold); margin-bottom: 0.75rem;
+        }
+        .wrath-box p { color: rgba(255,255,255,0.85); font-size: 1.02rem; margin-bottom: 1rem; }
+        .wrath-box p:last-child { margin-bottom: 0; }
+        .wrath-box strong { color: var(--gold); }
+
+        footer {
+            background: #0f2419; padding: 2rem 4rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+        footer a { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+        footer a:hover { color: var(--gold); }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .article-wrapper { padding: 6.5rem 1.25rem 3rem; }
+            .related-grid { grid-template-columns: 1fr; }
+            footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+            .btn-gold, .btn-gold-outline { display: block; margin: 0.5rem 0; text-align: center; }
+            .bcf-actions { flex-direction: column; align-items: center; }
+        }
+        .bcf { background: var(--ink); padding: 3.5rem 2rem; margin-top: 0; }
+        .bcf-inner { max-width: 660px; margin: 0 auto; text-align: center; }
+        .bcf-eyebrow { font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+        .bcf h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 1rem; line-height: 1.25; }
+        .bcf p { color: rgba(255,255,255,0.55); font-size: 0.875rem; margin-bottom: 1.25rem; line-height: 1.65; }
+        .bcf-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.25rem; }
+        .bcf-btn-primary { display: inline-flex; align-items: center; background: var(--gold); color: var(--accent); font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 700; padding: 0.85rem 1.75rem; border-radius: 8px; letter-spacing: -0.01em; transition: background 0.2s; }
+        .bcf-btn-primary:hover { background: var(--gold-dim); }
+        .bcf-btn-secondary { display: inline-flex; align-items: center; background: transparent; color: rgba(255,255,255,0.65); font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 600; padding: 0.85rem 1.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.18); transition: all 0.2s; }
+        .bcf-btn-secondary:hover { background: rgba(255,255,255,0.07); }
+        .bcf-note { font-size: 0.72rem; color: rgba(255,255,255,0.3); margin-bottom: 0; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="logo">The Top <span>Applicant</span></a>
+    <div style="display:flex;gap:1.5rem;align-items:center;">
+        <a href="/blog" style="font-family:Space Grotesk,sans-serif;font-size:0.875rem;font-weight:600;color:var(--gray-500)">Blog</a>
+        <a href="/quiz" style="font-family:Space Grotesk,sans-serif;font-size:0.875rem;font-weight:600;color:var(--gold-dim)">Quiz 🎯</a>
+        <a href="/" class="nav-cta">Beat Workday →</a>
+    </div>
+</nav>
+
+<article class="article-wrapper">
+
+    <nav class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/blog">Blog</a> <span>›</span>
+        <span>Why Workday Keeps Rejecting Your Resume</span>
+    </nav>
+
+    <div class="article-meta">
+        <span class="article-tag">Workday ATS</span>
+        <span class="article-date">May 2, 2026</span>
+        <span class="article-read">· 8 min read</span>
+    </div>
+
+    <h1 class="article-title">Why Workday Keeps Rejecting Your Resume<br>(It's Not You — It's the System)</h1>
+
+    <p class="article-lead">
+        You spent 45 minutes filling out Workday's application form. You're more than qualified. You got auto-rejected in 6 seconds. Here's what actually happened — and why you need to stop playing by their rules.
+    </p>
+
+    <div class="article-body">
+
+        <p>Let me describe what just happened to you.</p>
+
+        <p>You found a job you actually want. You click the link. Workday opens. You're asked to re-enter everything that's already on your resume — your job history, your education, your skills, your dates. You spend 45 minutes doing Workday's job for free. You hit submit.</p>
+
+        <p>Six seconds later, you get the rejection email. Same day. No human ever looked at your application.</p>
+
+        <p>You didn't get rejected because you weren't qualified. <strong>You got rejected because a machine couldn't match your resume to a keyword list.</strong> That's it. That's the whole system.</p>
+
+        <div class="stat-box">
+            <div class="stat-number">75%</div>
+            <p>of Workday applications are auto-rejected without human review — even when the candidate is fully qualified</p>
+        </div>
+
+        <h2>What Workday Actually Is (And How It Works)</h2>
+
+        <p>Workday is enterprise HR software — one of the most widely deployed ATS (Applicant Tracking Systems) in the world. It's used by thousands of companies, from mid-size firms to Fortune 500 giants. If you've applied to a corporate job in the last five years, you've probably already interacted with Workday whether you knew it or not.</p>
+
+        <p>Here's the dirty secret: <strong>Workday's applicant matching is a keyword-scoring algorithm wearing a nice UI.</strong> When you submit your application, Workday's parsing engine extracts text from your resume — or more likely, from the form fields you filled out manually — and scores it against the job description.</p>
+
+        <p>Score above the threshold? You move forward. Score below it? Rejected, instantly. No human review. No second chance. Just an algorithm deciding your career fate in milliseconds.</p>
+
+        <div class="callout">
+            <p><strong>The problem:</strong> Workday doesn't evaluate your actual qualifications. It evaluates whether your resume's text matches the job description's text. A perfectly qualified candidate with slightly different wording gets rejected. A mediocre candidate who echoed the right keywords gets through. This isn't theory — it's documented behavior by HR professionals who hate their own ATS.</p>
+        </div>
+
+        <h2>Why You're Getting Rejected (The Actual Reasons)</h2>
+
+        <h3>1. Your resume was parsed wrong</h3>
+
+        <p>Workday uses Optical Character Recognition (OCR) and parsing algorithms to extract information from uploaded resumes. If your resume has any of these, Workday misreads it:</p>
+
+        <ul>
+            <li>Tables or multi-column layouts</li>
+            <li>Headers or footers with contact information</li>
+            <li>Non-standard fonts, graphics, or icons</li>
+            <li>Text inside shapes or text boxes</li>
+            <li>PDFs with embedded images instead of text</li>
+        </ul>
+
+        <p>Workday sees a picture of your email address instead of the email address itself. It sees a table where it expects bullet points. It extracts nothing useful and scores you near zero. Instant rejection.</p>
+
+        <h3>2. You didn't use the exact keywords</h3>
+
+        <p>Workday's scoring weights keyword matches heavily. If the job posting says <em>"project management"</em> and you wrote <em>"managed projects"</em>, that's a partial match at best. If the job says <em>"stakeholder management"</em> and you wrote <em>"client relations"</em>, those might not match at all — even though they describe the same skill.</p>
+
+        <p>The system is literally checking boxes: does the word "Python" appear? Does "P&L" or "profit and loss" appear? Does the job title "Senior Analyst" appear in your history? These are crude, brittle checks. Your actual abilities don't matter — only the text matching.</p>
+
+        <h3>3. You answered the application questions wrong</h3>
+
+        <p>Workday applications often include <strong>knockout questions</strong> — questions where a wrong answer automatically rejects you, regardless of the rest of your application. These are things like:</p>
+
+        <ul>
+            <li>"Are you legally authorized to work in the US?" — Answer wrong and you're done</li>
+            <li>"Years of experience required: 5+" — Answer "4 years" and you're filtered out</li>
+            <li>"Do you have this specific certification?" — Answer no and you're rejected instantly</li>
+        </ul>
+
+        <p>These questions are often poorly worded, ambiguous, or ask about things that don't translate cleanly from your actual resume. Answer them wrong and you're out — even if your resume clearly demonstrates the required experience.</p>
+
+        <h3>4. The job was already filled</h3>
+
+        <p>Companies routinely leave Workday job listings open weeks after filling the position. The ATS keeps accepting applications even though the role is gone. Your rejection had nothing to do with you — the job simply no longer exists.</p>
+
+        <h2>The Asymmetric Warfare Nobody Told You About</h2>
+
+        <p>Here's the thing nobody in career advice will tell you: <strong>companies have been waging asymmetric warfare on job applicants for over a decade.</strong> Automated rejection, keyword black boxes, personality quizzes that measure nothing, video interview AI that judges your eye contact — all of it designed to reduce the human cost of hiring by filtering applicants at scale.</p>
+
+        <p>And here's the part that should make you angry: <strong>the people running these systems — HR professionals, recruiters, hiring managers — are furious about it too.</strong></p>
+
+        <div class="quote-block">
+            <p>"I have to use this tool but I hate it. I spend half my time fighting the ATS instead of finding good candidates. It rejects people I would hire every single day."</p>
+            <cite>— HR Director at a Fortune 100 company, speaking anonymously</cite>
+        </div>
+
+        <div class="wrath-box">
+            <h3>The uncomfortable truth</h3>
+            <p>Companies <strong>want</strong> you to keep losing. Every time you get rejected by Workday and spend another 45 minutes on the next application, you're doing free labor for their hiring pipeline. You're providing demand for a system that filters you out. You're generating the data they use to refine their rejection algorithms.</p>
+            <p>Stop playing defense on a field that's designed for you to lose. <strong>Learn the rules of the machine and make it work for you.</strong></p>
+        </div>
+
+        <h2>How to Actually Beat Workday's System</h2>
+
+        <p>You have two choices. You can keep doing what you're doing and keep getting the same results. Or you can understand how the scoring works and optimize for it.</p>
+
+        <h3>Before you apply: reverse-engineer the keywords</h3>
+
+        <p>Go to the job posting. Copy the entire text into a document. Find the skills, tools, certifications, and experience requirements listed. Build those exact phrases into your resume. Not paraphrased — <strong>exact matches</strong>.</p>
+
+        <p>If the job says "project management," your resume must say "project management." If it says "Python" and "SQL," those exact words need to appear in your skills section. Not "programming in Python" — just "Python."</p>
+
+        <h3>Before you apply: clean your formatting</h3>
+
+        <p>Workday's parser breaks on anything complex. Your resume should be:</p>
+
+        <ul>
+            <li>Single column layout — no sidebars, no two-column grids</li>
+            <li>Standard fonts: Arial, Calibri, Helvetica</li>
+            <li>Plain text bullets, not fancy characters</li>
+            <li>No tables, no text boxes, no images, no icons</li>
+            <li>Contact info in the body of the document, not in headers or footers</li>
+            <li>Submitted as .docx unless PDF is explicitly required</li>
+        </ul>
+
+        <h3>When filling out Workday's form: answer knockout questions first</h3>
+
+        <p>Read every question carefully. If one of them can disqualify you — certifications, clearance, years of experience — answer it honestly but strategically. Sometimes answering the knockout question in a different way (using a range vs. a number, for example) keeps you in the running.</p>
+
+        <h3>The nuclear option: skip the form entirely</h3>
+
+        <p>Many Workday systems allow you to upload a resume directly rather than filling out the form field by field. Upload a properly formatted, keyword-optimized resume. Let Workday's parser extract the data instead of manually entering it. This at least ensures your actual resume — not your hurried form responses — gets scored.</p>
+
+        <div class="red-alert-box">
+            <p>⚠️ Critical: Even perfectly formatted resumes fail if you use the wrong keywords. The single biggest rejection reason is keyword mismatch. Not qualifications — keywords.</p>
+        </div>
+
+        <h2>Why Manually Optimizing Still Fails</h2>
+
+        <p>Here's the catch: manually optimizing for Workday is possible but it's exhausting and inconsistent. You need to do it for every single application. You need to carefully reverse-engineer each job description. You need to keep track of which keywords you used where. And even when you do everything right, Workday's parser might still misread your resume on a bad day.</p>
+
+        <p>Most people don't have 45 minutes per job to do this properly — and if you're applying to 20 jobs, that's 15 hours of Workday form filling, not counting the actual optimization work.</p>
+
+        <p>There's a better way.</p>
+
+        <h2>The Top Applicant Wins 3 Out of 4 Applications</h2>
+
+        <p>The Top Applicant isn't a resume template tool. It's an AI career architect that does one thing better than anything else: <strong>it designs your entire professional narrative to be unfilterable by Workday's system.</strong></p>
+
+        <p>Here's how it works:</p>
+
+        <ul>
+            <li><strong>Job-specific optimization</strong> — The AI analyzes the actual job posting, extracts the exact keywords Workday is scoring on, and rebuilds your resume to hit those keywords naturally</li>
+            <li><strong>Parser-safe formatting</strong> — Every resume is formatted specifically for ATS parsing, single-column, standard fonts, clean structure</li>
+            <li><strong>Workday-ready output</strong> — Resumes are formatted to upload cleanly to Workday's resume parser, not just look good to a human</li>
+            <li><strong>Cover letter + LinkedIn</strong> — The full package, all optimized for the specific job and the specific ATS system you're applying to</li>
+        </ul>
+
+        <p>The result: <strong>75% of applications result in recruiter outreach or interview requests</strong> — not because the tool "gets you past the bots" with some magic trick, but because it does the work properly that Workday's system is actually checking for.</p>
+
+        <div class="stat-box">
+            <div class="stat-number">75%</div>
+            <p>of Top Applicant users get recruiter contact or interview requests — vs. ~5% industry average for cold applications through Workday</p>
+        </div>
+
+        <div class="article-cta">
+            <h3>Stop losing to Workday. Start winning.</h3>
+            <p>AI career architect with job-specific resume optimization, cover letter, and LinkedIn rewrite. Built to pass ATS screening AND impress human recruiters.</p>
+            <div>
+                <a href="/" class="btn-gold" onclick="if(typeof fbq==='function')fbq('track','Lead');">
+                    $29/month
+                    <span class="btn-tag">· full access · cancel anytime</span>
+                </a>
+                <a href="/" class="btn-gold-outline" onclick="if(typeof fbq==='function')fbq('track','Lead');">
+                    $149 lifetime
+                    <span class="btn-tag">· founding member price</span>
+                </a>
+            </div>
+            <p class="article-cta-sub">30-day money-back guarantee · No contracts · Your data is never sold</p>
+            <p style="margin-top:0.85rem;font-size:0.73rem;color:rgba(255,255,255,0.4);text-align:center;">Other builders keep your resume data forever and sell it to recruiters. We delete yours — $149 once vs. $348/year they never mention.</p>
+        </div>
+
+        <h2>Quick Workday Survival Checklist</h2>
+
+        <p>Before you submit your next Workday application:</p>
+
+        <ul>
+            <li>☑ Extracted all keywords from the job posting — used exact matches in your resume</li>
+            <li>☑ Reformatted your resume: single column, standard font, no tables or graphics</li>
+            <li>☑ Uploaded your resume file (let the parser extract it) — not manual form entry</li>
+            <li>☑ Answered all knockout questions before submitting — checked for disqualifiers</li>
+            <li>☑ Confirmed the position is still open (check LinkedIn or company careers page)</li>
+            <li>☑ Your skills section mirrors the job description's exact language</li>
+        </ul>
+
+        <p>Do this every time and your rejection rate will drop. But for most people, doing this manually is unsustainable — there's a reason you keep falling back into the same patterns.</p>
+
+        <hr class="article-divider">
+
+        <p><em>The Top Applicant is a veteran-owned career platform that builds ATS-optimized, job-specific resumes. We designed our AI to win the game Workday is playing — not to tell you the game is unfair and send you home. <strong>Stop getting rejected by a keyword-matching algorithm.</strong> Get the system working for you.</em></p>
+
+        <div class=article-cta style=margin-top:2rem>
+            <h3>Not sure which ATS rejected you?</h3>
+            <p>Take the 5-question quiz to find out exactly which system filtered out your application — and get a personalized fix.</p>
+            <a href=/quiz class=btn-gold style=background:var(--gold);color:var(--accent)>
+                &#x1F92B; Take the ATS Quiz &#x2192;
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-section">
+        <h4>Keep reading</h4>
+        <div class="related-grid">
+            <a href="/beat-taleo-ats" class="related-card">
+                <div class="rtag">Taleo Strategy</div>
+                <h5>How to Beat Taleo&#39;s ATS (And Why It&#39;s Rigged Against You)</h5>
+            </a>
+            <a href="/greenhouse-lever-ats" class="related-card">
+                <div class="rtag">Startup ATS</div>
+                <h5>Greenhouse &amp; Lever: How Startup ATS Filters Dump Your Application</h5>
+            </a>
+            <a href="/adp-ats-rejecting-resume" class="related-card">
+                <div class="rtag">ADP Strategy</div>
+                <h5>How ADP&#39;s ATS Is Silently Rejecting Your Resume</h5>
+            </a>
+            <a href="/quiz" class="related-card">
+                <div class="rtag">Quiz</div>
+                <h5>🔫 Which ATS Assassinated Your Application? (5-Question Quiz)</h5>
+            </a>
+        </div>
+    </div>
+
+</article>
+
+<!-- Blog CTA Footer -->
+<div class="bcf">
+    <div class="bcf-inner">
+        <div class="bcf-eyebrow">The fix you actually need</div>
+        <h3>Other resume builders store your data forever and sell it to recruiters. We delete yours.</h3>
+        <p>No ads. No data brokering. No monthly hostage fees. <strong style="color:white;">$149 once</strong> — vs. the $348/year legacy builders quietly bill you for. One price. No tricks.</p>
+        <div class="bcf-actions">
+            <a href="https://buy.stripe.com/3cI3cwffU6Dsc5XcZGfYY01" class="bcf-btn-primary">Get Lifetime Access — $149 →</a>
+            <a href="https://buy.stripe.com/cNi00k9VAbXM3zr2l2fYY00" class="bcf-btn-secondary">Start Monthly — $29/mo →</a>
+        </div>
+        <p class="bcf-note">4-day free trial on monthly · 30-day money-back guarantee · Zero data retained. Ever.</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 The Top Applicant Group, Inc. Veteran-owned. No data sold. Ever.</p>
+    <div style="display:flex;gap:1.5rem;">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/">Get Started</a>
+    </div>
+</footer>
+
+
+<script type="module" src="/firebase-app.js"></script>
+
+</body>
+</html>

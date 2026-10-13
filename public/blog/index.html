@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Advice Blog — The Top Applicant</title>
+    <meta name="description" content="Expert career advice on beating ATS systems, AI resume tools, and job search strategies for veterans and civilians. Veteran-owned. No ads. No data sold.">
+    <link rel="canonical" href="/blog" />    
+<!-- Open Graph -->
+    <meta property="og:title" content="Career Advice Blog — The Top Applicant" />
+    <meta property="og:description" content="Expert guides on ATS optimization, AI resume tools, and job search strategies that actually work." />
+    <meta property="og:url" content="/blog" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-blog.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ink: #0a0a0a;
+            --paper: #faf9f7;
+            --accent: #1a3a2a;
+            --accent-mid: #2d5a3f;
+            --accent-light: #3d7a55;
+            --gold: #c8a84e;
+            --gold-soft: #f5ecd4;
+            --gold-dim: #a8882e;
+            --white: #ffffff;
+            --gray-50: #f8f7f5;
+            --gray-100: #f0efed;
+            --gray-200: #e0deda;
+            --gray-300: #c5c3bf;
+            --gray-500: #8a8884;
+            --gray-700: #4a4845;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        /* NAV */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.25rem 4rem;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+            background: rgba(250,249,247,0.92); backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; color: var(--accent); }
+        .logo span { color: var(--gold); }
+        .nav-cta {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--accent); color: white;
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 600;
+            padding: 0.6rem 1.4rem; border-radius: 100px; transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--accent-mid); }
+
+        /* HERO */
+        .blog-hero {
+            padding: 9rem 4rem 4rem;
+            max-width: 1200px; margin: 0 auto;
+            text-align: center;
+        }
+        .section-label {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem;
+        }
+        .blog-hero h1 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            font-size: clamp(2.5rem, 5vw, 3.75rem); line-height: 1.1;
+            letter-spacing: -1px; color: var(--accent); margin-bottom: 1.25rem;
+        }
+        .blog-hero p {
+            font-size: 1.15rem; color: var(--gray-700); max-width: 560px; margin: 0 auto;
+        }
+
+        /* ARTICLES GRID */
+        .articles-section {
+            max-width: 1200px; margin: 0 auto; padding: 3rem 4rem 6rem;
+        }
+        .articles-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem;
+        }
+        .article-card {
+            background: var(--white); border: 1px solid var(--gray-100);
+            border-radius: 16px; overflow: hidden;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .article-card:hover { box-shadow: 0 12px 40px rgba(26,58,42,0.12); transform: translateY(-3px); }
+
+        .card-tag-strip {
+            background: var(--accent); padding: 1rem 1.5rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .card-tag {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600;
+            letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+        }
+        .card-read-time {
+            font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.6);
+        }
+
+        .card-body { padding: 1.75rem; }
+        .card-body h2 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem;
+            color: var(--accent); line-height: 1.3; margin-bottom: 0.75rem;
+        }
+        .card-body p { font-size: 0.93rem; color: var(--gray-700); line-height: 1.65; margin-bottom: 1.5rem; }
+        .card-cta {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 600;
+            color: var(--accent-mid); border-bottom: 2px solid var(--gold); padding-bottom: 2px;
+            transition: color 0.2s;
+        }
+        .card-cta:hover { color: var(--gold-dim); }
+        .card-cta svg { transition: transform 0.2s; }
+        .article-card:hover .card-cta svg { transform: translateX(4px); }
+
+        /* FOOTER CTA */
+        .blog-footer-cta {
+            background: var(--accent); padding: 5rem 4rem;
+            text-align: center;
+        }
+        .blog-footer-cta h2 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            font-size: clamp(1.75rem, 3vw, 2.5rem); color: white; margin-bottom: 1rem;
+        }
+        .blog-footer-cta p { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 2rem; }
+        .btn-gold {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--gold); color: var(--accent);
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem;
+            padding: 1rem 2.25rem; border-radius: 100px;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .btn-gold:hover { background: var(--gold-dim); transform: translateY(-1px); }
+
+        /* FOOTER */
+        footer {
+            background: #0f2419; padding: 2rem 4rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+        footer a { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+        footer a:hover { color: var(--gold); }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .blog-hero { padding: 7rem 1.5rem 3rem; }
+            .articles-section { padding: 2rem 1.5rem 4rem; }
+            .articles-grid { grid-template-columns: 1fr; }
+            .blog-footer-cta { padding: 3rem 1.5rem; }
+            footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="logo">The Top <span>Applicant</span></a>
+    <a href="/quiz" style="font-family:'Space Grotesk',sans-serif;font-size:0.875rem;font-weight:600;color:var(--gold-dim);opacity:0.9;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.9'">Quiz</a>
+            <a href="/" class="nav-cta">
+        Try Free →
+    </a>
+</nav>
+
+<section class="blog-hero">
+    <p class="section-label">Career Advice</p>
+    <h1>Beat the Bots.<br>Get Hired.</h1>
+    <p>Practical guides on ATS systems, AI resume tools, and job search strategies — from a veteran-owned team that's been in the trenches.</p>
+</section>
+
+<section class="articles-section">
+    <div class="articles-grid">
+
+        
+        <!-- Quiz Card -->
+        <a href="/quiz" class="article-card" style="border: 2px solid var(--gold); background: linear-gradient(135deg, #0c1a10 0%, #1a3a2a 100%); text-decoration: none;">
+            <div style="background: var(--gold); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0a0a0a;">Free Quiz</span>
+                <span style="font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: rgba(10,10,10,0.6);">5 questions · 2 min</span>
+            </div>
+            <div class="card-body" style="padding: 1.75rem;">
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--paper); line-height: 1.3; margin-bottom: 0.75rem;">Which ATS Assassinated Your Application?</h2>
+                <p style="font-size: 0.93rem; color: rgba(250,249,247,0.7); line-height: 1.65; margin-bottom: 1.5rem;">Find out which ATS system rejected you — Workday, Taleo, Greenhouse, or ADP — and get a personalized fix. Fun, fast, and brutally honest.</p>
+                <span style="display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 700; color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 2px;">
+                    Take the Quiz →
+                </span>
+            </div>
+        </a>
+
+        <!-- Article 1 -->
+<a href="/blog/beat-ats-systems-2026" class="article-card">
+            <div class="card-tag-strip">
+                <span class="card-tag">ATS Strategy</span>
+                <span class="card-read-time">9 min read</span>
+            </div>
+            <div class="card-body">
+                <h2>How to Beat ATS Systems in 2026</h2>
+                <p>99% of Fortune 500 companies use ATS to filter candidates before a human ever sees your resume. Here's how to stop being filtered out — and start getting interviews.</p>
+                <span class="card-cta">
+                    Read the guide
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="/blog/ai-resume-builder-vs-chatgpt" class="article-card">
+            <div class="card-tag-strip">
+                <span class="card-tag">Tool Comparison</span>
+                <span class="card-read-time">10 min read</span>
+            </div>
+            <div class="card-body">
+                <h2>AI Resume Builder vs ChatGPT for Resumes</h2>
+                <p>ChatGPT writes beautifully. But does it help you get hired? We break down the real difference between a purpose-built AI resume tool and generic AI — with interview rate data.</p>
+                <span class="card-cta">
+                    Read the guide
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="/blog/resume-tools-veterans-civilian-careers" class="article-card">
+            <div class="card-tag-strip">
+                <span class="card-tag">Veteran Resources</span>
+                <span class="card-read-time">11 min read</span>
+            </div>
+            <div class="card-body">
+                <h2>Best Resume Tools for Veterans Transitioning to Civilian Careers</h2>
+                <p>Military experience is an asset — but most resume tools don't know how to translate it. We reviewed 8 tools specifically for vets making the civilian jump.</p>
+                <span class="card-cta">
+                    Read the guide
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </div>
+        </a>
+
+        <a href="/adp-ats-rejecting-resume" class="article-card">
+            <div class="card-tag-strip">
+                <span class="card-tag">ADP Strategy</span>
+                <span class="card-read-time">11 min read</span>
+            </div>
+            <div class="card-body">
+                <h2>How ADP's ATS Is Silently Rejecting Your Resume</h2>
+                <p>ADP processes payroll for 1 in 6 U.S. workers. Most job seekers don't even know ADP has an ATS — but it's filtering your applications before a human ever sees them.</p>
+                <span style="font-size:0.78rem;color:var(--gold-dim);display:block;margin-bottom:0.75rem;">Not sure which ATS got you? <a href="/quiz" style="color:var(--gold);font-weight:600;">Take the quiz →</a></span>
+                <span class="card-cta">
+                    Read the briefing
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="blog-footer-cta">
+    <h2>Stop Losing to Algorithms</h2>
+    <p>The Top Applicant builds ATS-optimized, job-specific resumes in minutes. No credit card required.</p>
+    <a href="/" class="btn-gold">
+        Start Free — Beat the Bots →
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 The Top Applicant Group, Inc. Veteran-owned. No data sold. Ever.</p>
+    <div style="display:flex;gap:1.5rem;">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/quiz">Quiz</a>
+        <a href="/">Get Started</a>
+    </div>
+</footer>
+
+</body>
+</html>
