@@ -1,40 +1,43 @@
 const fs = require('fs');
 const path = require('path');
 
-function walkDir(dir) {
+function bruteForceRedirects(dir) {
+  let updatedFiles = 0;
   const files = fs.readdirSync(dir);
+  
   files.forEach(file => {
     if (file === 'node_modules' || file === '.git') return;
 
     const filePath = path.join(dir, file);
     if (fs.statSync(filePath).isDirectory()) {
-      walkDir(filePath);
+      bruteForceRedirects(filePath);
     } else if (filePath.endsWith('.html')) {
       let content = fs.readFileSync(filePath, 'utf8');
-      
-      // 1. Clean out all previous Firebase injected scripts
-      content = content.replace(/<script type="module">[\s\S]*?window\.startCheckout[\s\S]*?<\/script>/g, '');
-      content = content.replace(/<script>[\s\S]*?window\.startCheckout[\s\S]*?<\/script>/g, '');
-      
-      // 2. Inject the clean redirect function for the pricing buttons
-      const redirectScript = `
-        <script>
-          window.startCheckout = function(priceId, event) {
-            if (event) event.preventDefault();
-            // Routes pricing button clicks directly to your main app
-            window.location.href = 'https://thetopapplicant.com'; 
-          };
-        </script>
-        </body>
-      `;
-      
-      if (!content.includes('window.location.href = \'https://thetopapplicant.com\'')) {
-        content = content.replace('</body>', redirectScript);
+      let modified = false;
+
+      // 1. Override any onclick attributes calling startCheckout
+      if (content.match(/onclick=["']startCheckout[^"']*["']/g)) {
+        content = content.replace(/onclick=["']startCheckout[^"']*["']/g, `onclick="window.location.href='https://thetopapplicant.com'; return false;"`);
+        modified = true;
+      }
+
+      // 2. Override any hardcoded Stripe payment links
+      if (content.match(/href=["']https:\/\/buy\.stripe\.com[^"']*["']/g)) {
+        content = content.replace(/href=["']https:\/\/buy\.stripe\.com[^"']*["']/g, `href="https://thetopapplicant.com"`);
+        modified = true;
+      }
+
+      if (modified) {
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log('Wired pricing buttons to main app: ' + filePath);
+        console.log('Brute-forced redirects in: ' + filePath);
+        updatedFiles++;
       }
     }
   });
+  
+  if (dir === __dirname && updatedFiles === 0) {
+    console.log('No buttons or Stripe links found to update.');
+  }
 }
 
-walkDir(__dirname);
+bruteForceRedirects(__dirname);
