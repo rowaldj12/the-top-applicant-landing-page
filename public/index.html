@@ -2660,5 +2660,18 @@
         }
       };
     </script>
-</body>
+
+          <script type="module">
+            import { collection, addDoc, getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+            const db = getFirestore();
+            window.startCheckout = async (priceId) => {
+              await addDoc(collection(db, 'customers/USER_ID/checkout_sessions'), {
+                price: priceId,
+                success_url: window.location.origin,
+                cancel_url: window.location.href,
+              });
+            };
+          </script>
+          </body>
+        
 </html>
