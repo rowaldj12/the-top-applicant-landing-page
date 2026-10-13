@@ -2606,81 +2606,29 @@
     <script type="module" src="/firebase-app.js"></script>
 
     <!-- Stripe Checkout via Firebase Extension -->
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-      import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-      import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
-
-      const firebaseConfig = {
-        apiKey: "AIzaSyDYieylXKPAcdw4HmmbZdwlfShJXrRM7S4",
-        authDomain: "top-applicant-8a716.firebaseapp.com",
-        projectId: "top-applicant-8a716",
-        storageBucket: "top-applicant-8a716.firebasestorage.app",
-        messagingSenderId: "382307733734",
-        appId: "1:382307733734:web:8292eb9ace8cb93cde2b27",
-        measurementId: "G-9SR8Y80ER0"
-      };
-
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const auth = getAuth(app);
-      const db = getFirestore(app);
-
-      window.handleCheckout = async function(planType) {
-        const priceId = planType === 'monthly'
-          ? 'price_1Sore1K9pHvXlrFKhvKdbxaq' 
-          : 'price_1SorVLK9pHvXlrFK85lnsoc2';
-
-        try {
-          const userCredential = await signInAnonymously(auth);
-          const uid = userCredential.user.uid;
-
-          const checkoutSessionRef = await addDoc(
-            collection(db, `customers/${uid}/checkout_sessions`), {
-              price: priceId,
-              success_url: window.location.origin + '/?session_id={CHECKOUT_SESSION_ID}',
-              cancel_url: window.location.origin + '#pricing',
-            }
-          );
-
-          onSnapshot(checkoutSessionRef, (snap) => {
-            const data = snap.data();
-            if (data?.url) {
-              window.location.assign(data.url);
-            }
-            if (data?.error) {
-              alert(`Checkout error: ${data.error.message}`);
-            }
-          });
-
-        } catch (error) {
-          console.error("Error creating checkout session:", error);
-          alert("Failed to initialize checkout. Please check your connection and try again.");
-        }
-      };
-    </script>
-
-          <script type="module">
-            import { collection, addDoc, getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-            const db = getFirestore();
-            window.startCheckout = async (priceId) => {
-              await addDoc(collection(db, 'customers/USER_ID/checkout_sessions'), {
-                price: priceId,
-                success_url: window.location.origin,
-                cancel_url: window.location.href,
-              });
-            };
-          </script>
+    
+          
+          
           
           <script type="module">
+            import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
             import { collection, addDoc, getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-            const db = getFirestore();
+            
+            const firebaseConfig = {
+              apiKey: "AIzaSyDYieylXKPAcdw4HmmbZdwlfShJXrRM7S4",
+              projectId: "top-applicant-8a716",
+              appId: "1:382307733734:web:8292eb9ace8cb93cde2b27"
+            };
+            
+            const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+            const db = getFirestore(app);
+            
             window.startCheckout = async (priceId) => {
-              await addDoc(collection(db, 'customers/USER_ID/checkout_sessions'), {
+              const uid = 'anonymous_checkout'; 
+              await addDoc(collection(db, 'customers/' + uid + '/checkout_sessions'), {
                 price: priceId,
-                success_url: window.location.origin,
-                cancel_url: window.location.href,
+                success_url: window.location.origin + '/success.html',
+                cancel_url: window.location.origin,
                 subscription_data: {
                   trial_period_days: 4
                 }
@@ -2688,6 +2636,7 @@
             };
           </script>
           </body>
+        
         
         
 </html>
