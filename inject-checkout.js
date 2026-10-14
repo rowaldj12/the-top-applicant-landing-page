@@ -17,26 +17,41 @@ function bruteForceRedirects(dir) {
 
       // 1. Override any onclick attributes calling startCheckout
       if (content.match(/onclick=["']startCheckout[^"']*["']/g)) {
-        content = content.replace(/onclick=["']startCheckout[^"']*["']/g, `onclick="window.location.href='https://thetopapplicant.com'; return false;"`);
+        content = content.replace(
+          /onclick=["']startCheckout[^"']*["']/g,
+          `onclick="window.location.href='https://thetopapplicant.com'; return false;"`
+        );
         modified = true;
       }
 
       // 2. Override any hardcoded Stripe payment links
       if (content.match(/href=["']https:\/\/buy\.stripe\.com[^"']*["']/g)) {
-        content = content.replace(/href=["']https:\/\/buy\.stripe\.com[^"']*["']/g, `href="https://thetopapplicant.com"`);
+        content = content.replace(
+          /href=["']https:\/\/buy\.stripe\.com[^"']*["']/g,
+          `href="https://thetopapplicant.com"`
+        );
+        modified = true;
+      }
+
+      // 3. Ensure any remaining window.startCheckout function just redirects to the main app
+      if (content.includes('window.startCheckout')) {
+        content = content.replace(
+          /window\.startCheckout\s*=\s*async\s*function[\s\S]*?\};/g,
+          `window.startCheckout = function() { window.location.href = 'https://thetopapplicant.com'; };`
+        );
         modified = true;
       }
 
       if (modified) {
         fs.writeFileSync(filePath, content, 'utf8');
-        console.log('Brute-forced redirects in: ' + filePath);
+        console.log('Updated redirects in: ' + filePath);
         updatedFiles++;
       }
     }
   });
   
   if (dir === __dirname && updatedFiles === 0) {
-    console.log('No buttons or Stripe links found to update.');
+    console.log('All HTML files are already pointing to https://thetopapplicant.com!');
   }
 }
 
