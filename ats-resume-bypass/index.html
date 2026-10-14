@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume Gets 6 Seconds. Here's How to Win All 6. — The Top Applicant</title>
+    <meta name="description" content="Most resumes never reach a recruiter — the ATS kills them first. Learn how to beat automated screening and actually get seen by human eyes.">
+    <link rel="canonical" href="/ats-resume-bypass" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Your Resume Gets 6 Seconds. Here's How to Win All 6." />
+    <meta property="og:description" content="Most resumes never reach a recruiter — the ATS kills them first. Learn how to beat automated screening and actually get seen." />
+    <meta property="og:url" content="/ats-resume-bypass" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-05-02" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Resume Gets 6 Seconds. Here's How to Win All 6." />
+    <meta name="twitter:description" content="Most resumes never reach a recruiter — the ATS kills them first. Learn how to beat automated screening." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ink: #0a0a0a; --paper: #faf9f7; --accent: #1a3a2a; --accent-mid: #2d5a3f; --accent-light: #3d7a55;
+            --gold: #c8a84e; --gold-soft: #f5ecd4; --gold-dim: #a8882e; --white: #ffffff;
+            --gray-50: #f8f7f5; --gray-100: #f0efed; --gray-200: #e0deda; --gray-300: #c5c3bf;
+            --gray-500: #8a8884; --gray-700: #4a4845; --red: #c0392b; --red-soft: #fdecea;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.25rem 4rem; position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+            background: rgba(250,249,247,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--gray-100);
+        }
+        .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; color: var(--accent); }
+        .logo span { color: var(--gold); }
+        .nav-cta {
+            display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent); color: white;
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 600;
+            padding: 0.6rem 1.4rem; border-radius: 100px; transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--accent-mid); }
+
+        /* ARTICLE LAYOUT */
+        .article-wrapper {
+            max-width: 760px; margin: 0 auto; padding: 8rem 2rem 4rem;
+        }
+        .article-meta {
+            display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;
+        }
+        .article-tag {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 600;
+            letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+            background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 100px;
+            padding: 0.25rem 0.85rem;
+        }
+        .article-date { font-size: 0.82rem; color: var(--gray-500); }
+        .article-read { font-size: 0.82rem; color: var(--gray-500); }
+
+        h1.article-title {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.1;
+            letter-spacing: -1px; color: var(--accent); margin-bottom: 1.5rem;
+        }
+        .article-lead {
+            font-size: 1.2rem; color: var(--gray-700); line-height: 1.7;
+            border-left: 4px solid var(--gold); padding-left: 1.25rem; margin-bottom: 3rem;
+        }
+
+        /* ARTICLE BODY */
+        .article-body h2 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.6rem;
+            color: var(--accent); margin: 2.5rem 0 1rem; line-height: 1.25;
+        }
+        .article-body h3 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.15rem;
+            color: var(--accent-mid); margin: 2rem 0 0.75rem;
+        }
+        .article-body p { font-size: 1.05rem; line-height: 1.8; color: #2a2a2a; margin-bottom: 1.25rem; }
+        .article-body strong { color: var(--accent); }
+        .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+        .article-body li { font-size: 1.05rem; line-height: 1.8; color: #2a2a2a; margin-bottom: 0.4rem; }
+
+        .callout {
+            background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 12px;
+            padding: 1.5rem 1.75rem; margin: 2rem 0;
+        }
+        .callout p { margin: 0; font-size: 1.02rem; }
+        .callout strong { color: var(--accent); }
+
+        .stat-box {
+            background: var(--accent); color: white; border-radius: 12px;
+            padding: 1.5rem 1.75rem; margin: 2rem 0; text-align: center;
+        }
+        .stat-box .stat-number {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 3rem;
+            color: var(--gold); line-height: 1; margin-bottom: 0.5rem;
+        }
+        .stat-box p { color: rgba(255,255,255,0.8); font-size: 0.95rem; margin: 0; }
+
+        .quote-box {
+            border-left: 4px solid var(--accent); background: var(--gray-50);
+            border-radius: 0 12px 12px 0; padding: 1.5rem 1.75rem; margin: 2rem 0;
+        }
+        .quote-box p { font-size: 1.08rem; color: var(--accent); font-style: italic; margin: 0 0 0.5rem; }
+        .quote-box cite { font-size: 0.85rem; color: var(--gray-500); font-style: normal; }
+
+        .warn-box {
+            background: var(--red-soft); border: 1px solid var(--red); border-radius: 12px;
+            padding: 1.5rem 1.75rem; margin: 2rem 0;
+        }
+        .warn-box p { margin: 0; font-size: 1.02rem; color: var(--red); }
+        .warn-box strong { color: var(--red); }
+
+        /* DIVIDER */
+        .article-divider { border: none; border-top: 1px solid var(--gray-200); margin: 2.5rem 0; }
+
+        /* ARTICLE CTA */
+        .article-cta {
+            background: var(--accent); border-radius: 16px; padding: 2.5rem;
+            text-align: center; margin: 3rem 0;
+        }
+        .article-cta h3 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem;
+            color: white; margin-bottom: 0.75rem;
+        }
+        .article-cta p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 1.75rem; }
+        .btn-gold {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--gold); color: var(--accent);
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem;
+            padding: 1rem 2.25rem; border-radius: 100px; transition: background 0.2s, transform 0.15s;
+        }
+        .btn-gold:hover { background: var(--gold-dim); transform: translateY(-1px); }
+        .btn-gold-outline {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: transparent; color: white; border: 2px solid rgba(255,255,255,0.4);
+            font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.95rem;
+            padding: 0.85rem 1.75rem; border-radius: 100px; transition: border-color 0.2s, background 0.2s;
+        }
+        .btn-gold-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+        .btn-tag { font-size: 0.72rem; opacity: 0.75; }
+
+        /* PRICING STRIP */
+        .pricing-strip {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .pricing-card {
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px; padding: 1.25rem 1.75rem; text-align: center; min-width: 180px;
+        }
+        .pricing-card .price {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.75rem;
+            color: var(--gold); line-height: 1;
+        }
+        .pricing-card .label {
+            font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;
+        }
+        .pricing-card a {
+            display: inline-block; margin-top: 0.75rem; font-size: 0.82rem; color: white;
+            text-decoration: underline; text-underline-offset: 2px;
+        }
+        .pricing-card a:hover { color: var(--gold); }
+
+        /* BREADCRUMB */
+        .breadcrumb { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+        .breadcrumb a { color: var(--accent-mid); }
+        .breadcrumb a:hover { color: var(--gold-dim); }
+
+        /* RELATED */
+        .related-section { padding: 3rem 0; border-top: 1px solid var(--gray-200); }
+        .related-section h4 {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem;
+            color: var(--gray-700); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 1.5rem;
+        }
+        .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .related-card {
+            background: var(--white); border: 1px solid var(--gray-100); border-radius: 12px;
+            padding: 1.25rem; transition: box-shadow 0.2s;
+        }
+        .related-card:hover { box-shadow: 0 6px 24px rgba(26,58,42,0.1); }
+        .related-card .rtag { font-family: 'Space Grotesk', sans-serif; font-size: 0.66rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+        .related-card h5 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--accent); line-height: 1.3; }
+
+        footer {
+            background: #0f2419; padding: 2rem 4rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+        footer a { color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+        footer a:hover { color: var(--gold); }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .article-wrapper { padding: 6.5rem 1.25rem 3rem; }
+            .related-grid { grid-template-columns: 1fr; }
+            footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+            .pricing-strip { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="logo">The Top <span>Applicant</span></a>
+    <a href="/" class="nav-cta">Try Free →</a>
+</nav>
+
+<article class="article-wrapper">
+
+    <nav class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/blog">Blog</a> <span>›</span>
+        <span>Your Resume Gets 6 Seconds</span>
+    </nav>
+
+    <div class="article-meta">
+        <span class="article-tag">ATS Bypass</span>
+        <span class="article-date">May 2, 2026</span>
+        <span class="article-read">· 11 min read</span>
+    </div>
+
+    <h1 class="article-title">Your Resume Gets 6 Seconds.<br>Here's How to Win All 6.</h1>
+
+    <p class="article-lead">
+        The average recruiter spends 6 seconds on your resume. But here's what they don't tell you — most resumes never reach a recruiter at all. The ATS killed them first.
+    </p>
+
+    <div class="article-body">
+
+        <p>You finished the application. Hit submit. Felt good about it. And then — silence. No call. No email. Nothing. You start wondering if something's wrong with you.</p>
+
+        <p>Nothing's wrong with you. The system just doesn't want you in the door.</p>
+
+        <div class="stat-box">
+            <div class="stat-number">75%+</div>
+            <p>of resumes are auto-rejected by ATS before a human ever reads them — even when the applicant is fully qualified</p>
+        </div>
+
+        <h2>The Machine You Didn't Know You Were Fighting</h2>
+
+        <p>Before your resume lands in front of anyone, it goes through an Applicant Tracking System (ATS). Every major company uses one. Taleo. Workday. Greenhouse. Lever. iCIMS. These systems collect your resume, extract everything readable from it, score you against the job description, and rank you against every other applicant.</p>
+
+        <p>If your score is too low — you're out. Not filtered. Not paused. <strong>Out.</strong></p>
+
+        <p>And here's the thing: the ATS isn't checking if you're good at your job. It's checking if your resume looks like a match for the job posting. Different task entirely. You can be the best engineer in the room and lose to someone with better keyword placement.</p>
+
+        <h2>How Automated Screening Actually Works</h2>
+
+        <p>Most ATS platforms score resumes across five rough dimensions:</p>
+
+        <ul>
+            <li><strong>Keyword frequency</strong> — Does your resume contain the terms the job description uses?</li>
+            <li><strong>Section parsing</strong> — Can it find a Work Experience section? Education? Skills?</li>
+            <li><strong>Title matching</strong> — Does your job history include titles similar to the role?</li>
+            <li><strong>Recency weighting</strong> — More recent roles score higher than older ones</li>
+            <li><strong>Hard filters</strong> — Years of experience, degree requirements, specific certifications</li>
+        </ul>
+
+        <p>The threshold for survival is usually <strong>60–75% match score</strong> — and in high-volume roles at large companies, it can be higher. If your resume doesn't hit the mark, a recruiter literally never sees it. They don't even get a notification that a new application arrived.</p>
+
+        <div class="callout">
+            <p><strong>The keyword lottery:</strong> Every job posting has a set of terms the ATS is tuned to look for. Use the right ones, you're in. Use slightly different terms — or miss one entirely — and you might as well have not applied. Most job seekers don't know which terms matter, so they guess wrong and lose by default.</p>
+        </div>
+
+        <h2>The 6-Second Myth (And Why It's Worse Than It Sounds)</h2>
+
+        <p>You've heard that recruiters spend 6 seconds on a resume. That's true — but it's not the whole story. First, you have to pass the ATS to even reach a recruiter. That 6-second window is the lucky few. Everyone else gets zero seconds.</p>
+
+        <div class="quote-box">
+            <p>"We hate it. I genuinely hate that our ATS filters out people I would have called in a heartbeat. But nobody has the bandwidth to read 500 resumes for every open role. The algorithm is the gatekeeper whether we like it or not."</p>
+            <cite>— Senior HR recruiter at a Fortune 500 company, speaking anonymously</cite>
+        </div>
+
+        <p>HR professionals are increasingly frustrated with systems that reject qualified candidates automatically. But the machines aren't going anywhere. Companies got used to the efficiency. Recruiters got used to only seeing the top-ranked candidates. The math made sense — until you were on the wrong side of it.</p>
+
+        <h2>Asymmetric Warfare: Stop Playing Their Game</h2>
+
+        <p>For decades, companies have built increasingly sophisticated systems to reject you faster. They call it <em>efficiency</em>. You call it <em>never hearing back</em>.</p>
+
+        <p>The old advice was to just submit more applications. Throw enough at the wall, something sticks. But the ATS now handles volume that humans never could — and it filters ruthlessly. You can't out-volume a machine that rejects 75% of applicants before a human sees any of them.</p>
+
+        <p>There's a different play: <strong>make the machine work for you, not against you.</strong></p>
+
+        <p>Companies built systems to reject you faster. The solution isn't to fight harder — it's to stop playing by their rules and start speaking the machine's language. Your resume isn't a document describing your career. It's a specific argument that you match this specific job posting. That distinction changes everything.</p>
+
+        <div class="warn-box">
+            <p><strong>The old approach doesn't work anymore:</strong> One generic resume, tweaked slightly, sent to 50 jobs. ATS systems got smarter. Keyword-matching got more precise. A resume that scored 70% three years ago might score 45% today against the same job description — simply because systems evolved and your document didn't.</p>
+        </div>
+
+        <h2>The Resume Is Not Your Story. It's Their Filter.</h2>
+
+        <p>This is the reframe that changes everything:</p>
+
+        <p><strong>Your resume is not a summary of your career.</strong> It's a targeted argument that you're a strong match for a specific role — one that needs to pass through an automated filter before it ever reaches human eyes.</p>
+
+        <p>That means the content that matters isn't what you did — it's what they said they wanted, and how clearly your resume signals you have it. Two candidates with identical experience can submit identical resumes and get radically different outcomes if one happens to use the keywords the ATS is tuned to detect.</p>
+
+        <p>This feels unfair because it is unfair. But it's also solvable — once you understand the rules of the game you're actually playing.</p>
+
+        <h2>How to Actually Win All 6 Seconds</h2>
+
+        <h3>1. Build a Resume That Plays Both Referees</h3>
+
+        <p>Most advice splits into two camps: optimize for ATS or optimize for humans. You need to do both simultaneously — because if you pass the machine and confuse the human, you get the call but fumble the interview. If you write beautifully for humans and fail the ATS scan, nobody reads it.</p>
+
+        <p>The skill is writing a document that passes keyword thresholds <em>while still reading naturally to someone spending 6 seconds scanning it.</em> These aren't as incompatible as they sound, but you have to think about them together, not sequentially.</p>
+
+        <h3>2. Mirror the Job Description's Language Exactly</h3>
+
+        <p>ATS systems score based on term matching. If the posting says "cross-functional stakeholder management" and you wrote "led teams across departments," you may score lower even though you mean the same thing. Precision matters more than intent.</p>
+
+        <ul>
+            <li>Copy skill terms verbatim from the job posting</li>
+            <li>Match acronyms the way the posting does them</li>
+            <li>Use the same action verbs they use in the role requirements</li>
+            <li>When in doubt, include both: "SEO (Search Engine Optimization)"</li>
+        </ul>
+
+        <h3>3. Feed the Parser Before It Goes Looking</h3>
+
+        <p>Most ATS systems look for a Skills section and parse it specifically. If you don't have one — or it's buried inside job descriptions — the system may miss credentials it would have counted. Put a clearly labeled Skills section near the top. List both hard and soft skills that appear in the job description. This is the highest-leverage ATS optimization available.</p>
+
+        <h3>4. Lead With Credentials (Before It Gets to Your Experience)</h3>
+
+        <p>Many ATS systems assign higher weight to things mentioned early in the document. Certifications, degrees, and specialized training should appear in your summary or professional profile — not buried at the bottom in an Education section. Think of it as the ATS's first impression: make it count.</p>
+
+        <h3>5. Quantify in Language ATS Systems Know to Look For</h3>
+
+        <p>Numbers survive parsing better than prose. "Increased regional revenue 34%" is more likely to be correctly parsed and scored than "significantly grew sales across the region." ATS systems look for specific patterns — dollar amounts, percentages, timeframes, team sizes. Give them what they're looking for.</p>
+
+        <h2>Why Manual Optimization Still Leaves You Short</h2>
+
+        <p>Doing all of this manually — reading each job posting, identifying keywords, rewriting bullet points, checking formatting — takes 30–60 minutes per application if done properly. Most people don't do it consistently. They do it for the first few jobs, get tired, and revert to a one-size-fits-all approach.</p>
+
+        <p>The problem is that ATS systems are now sophisticated enough that the difference between a generic resume and a job-specific one can be the difference between a 45% score and a 72% score. That's the entire gap between silence and an interview invite.</p>
+
+        <p>AI changes this math. Not general AI — purpose-built career AI that knows what Taleo looks for, what Workday scores on, how Greenhouse ranks based on section placement. You can apply to 10 jobs properly in the time it used to take to apply to 2.</p>
+
+        <div class="article-cta">
+            <h3>Stop letting ATS decide your fate</h3>
+            <p>The Top Applicant builds job-specific resumes that pass automated screening — not just for one system, but for all of them. Taleo, Workday, Greenhouse, Lever, iCIMS. One coherent career story, optimized for every machine and every human who reads it.</p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-bottom: 1.25rem;">Founders' Special — locking in lifetime access while it lasts.</p>
+            <div class="pricing-strip">
+                <div class="pricing-card">
+                    <div class="price">$149</div>
+                    <div class="label">one-time · lifetime access</div>
+                    <a href="https://thetopapplicant.com" target="_blank">Founders' Special →</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="price">$29/mo</div>
+                    <div class="label">full access · cancel anytime</div>
+                    <a href="https://thetopapplicant.com" target="_blank">Start for $29/month →</a>
+                </div>
+            </div>
+            <div style="margin-top: 1rem;">
+                <a href="/" class="btn-gold-outline">
+                    Try free for 7 days · No credit card required
+                </a>
+            </div>
+        </div>
+
+        <h2>The Bottom Line</h2>
+
+        <p>The ATS isn't going anywhere. Companies invested too much in the infrastructure to abandon it, and the volume problem is real — most large companies receive hundreds of applications for a single role. The machine is the filter, and it's not changing.</p>
+
+        <p>But here's what is changing: the candidates who understand how the machine works and build for it specifically. Not generic optimization — targeted, job-specific, ATS-aware resumes built around exactly what each system is scoring for.</p>
+
+        <p>The 6-second window exists. But first you have to get past the 500 resumes that came before yours. The Top Applicant does both.</p>
+
+        <hr class="article-divider">
+
+        <p><em>The Top Applicant is a veteran-owned career platform. No data sold. No ads. Just tools that actually work — AI that builds ATS-optimized resumes, cover letters, and LinkedIn profiles for every job you apply to, not just the one you uploaded.</em></p>
+
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-section">
+        <h4>Keep reading</h4>
+        <div class="related-grid">
+            <a href="/greenhouse-lever-ats" class="related-card">
+                <div class="rtag">Startup ATS</div>
+                <h5>Greenhouse &amp; Lever: How Startup ATS Filters Dump Your Application</h5>
+            </a>
+            <a href="/blog/beat-ats-systems-2026" class="related-card">
+                <div class="rtag">ATS Strategy</div>
+                <h5>How to Beat ATS Systems in 2026</h5>
+            </a>
+            <a href="/adp-ats-rejecting-resume" class="related-card">
+                <div class="rtag">ADP Strategy</div>
+                <h5>How ADP&#2019s ATS Is Silently Rejecting Your Resume</h5>
+            </a>
+        </div>
+    </div>
+
+</article>
+
+<footer>
+    <p>© 2026 The Top Applicant Group, Inc. · Veteran-owned.</p>
+    <div>
+        <a href="/privacy">Privacy</a> &nbsp;·&nbsp;
+        <a href="/terms">Terms</a> &nbsp;·&nbsp;
+        <a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog">Blog</a> &nbsp;·&nbsp; <a href="/quiz">Quiz</a>
+    </div>
+</footer>
+
+
+<!-- First-Party Analytics -->
+<script>
+(function() {
+    var TRACK = '/api/track';
+    var p = new URLSearchParams(window.location.search);
+    var _utm = {
+        utm_source:   p.get('utm_source')   || '',
+        utm_medium:   p.get('utm_medium')   || '',
+        utm_campaign: p.get('utm_campaign') || '',
+        fbclid:       p.get('fbclid')       || ''
+    };
+    function getSection(el) {
+        if (el.closest('nav')) return 'nav';
+        var bcf = el.closest('.bcf,.blog-cta-footer,.cta-footer,.hero');
+        if (bcf) return 'blog_cta';
+        var s = el.closest('section');
+        if (s) return s.id || s.className.split(' ')[0] || 'section';
+        return 'page';
+    }
+    function send(payload) {
+        var data = Object.assign({ page_url: window.location.href, referrer: document.referrer }, _utm, payload);
+        var json = JSON.stringify(data);
+        try {
+            fetch(TRACK, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: json,
+                keepalive: true
+            }).catch(function() {
+                try { navigator.sendBeacon(TRACK, json); } catch(e) {}
+            });
+        } catch (e) {
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(TRACK, new Blob([json], { type: 'application/json' }));
+            }
+        }
+    }
+    send({ event_type: 'pageview' });
+    document.addEventListener('click', function(e) {
+        var el = e.target.closest('a[href*="buy.stripe.com"], a[href*="stripe.com/pay"], .nav-cta, .btn-primary, .btn-secondary, .bcf-btn-primary, .bcf-btn-secondary, .btn-gold, .btn-white');
+        if (!el) return;
+        var href = el.getAttribute('href') || '';
+        var isCheckout = href.indexOf('stripe.com') !== -1;
+        send({
+            event_type:   isCheckout ? 'checkout_initiated' : 'cta_click',
+            button_label: el.textContent.trim().replace(/\s+/g, ' ').slice(0, 100),
+            section:      getSection(el)
+        });
+    });
+})();
+</script>
+<!-- End First-Party Analytics -->
+
+
+          
+          
+          
+          
+          
+          
+          
+          
+        <script>
+          window.startCheckout = function(priceId, event) {
+            if (event) event.preventDefault();
+            // Routes pricing button clicks directly to your main app
+            window.location.href = 'https://thetopapplicant.com'; 
+          };
+        </script>
+        </body>
+      
+        
+        
+        
+        
+</html>
